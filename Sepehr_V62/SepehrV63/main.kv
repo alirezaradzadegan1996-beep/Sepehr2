@@ -1,0 +1,23 @@
+<UI>:
+
+    orientation: "vertical"
+
+    Label:
+        text: "🤖 Sepehr V63"
+
+    ScrollView:
+        Label:
+            id: chat
+            text: ""
+            size_hint_y: None
+            height: self.texture_size[1]
+
+    TextInput:
+        id: input
+        hint_text: "پیام بنویس..."
+
+    Button:
+        text: "ارسال"
+        size_hint_y: None
+        height: "50dp"
+        on_press: root.send()
