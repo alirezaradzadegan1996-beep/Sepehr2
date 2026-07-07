@@ -1,0 +1,243 @@
+[2026-07-01 17:31:56] User: سلام | Intent: greeting
+[2026-07-01 17:32:05] User: سرعت نور چنده؟ | Intent: knowledge
+[2026-07-01 17:32:15] User: ماشینم مدلش چیه؟ | Intent: knowledge
+[2026-07-01 17:32:26] User: ماشینم چیه؟ | Intent: knowledge
+[2026-07-01 17:35:40] User: ماشینم چیه؟ | Intent: memory
+[2026-07-01 17:36:00] User: اسمم چیه؟ | Intent: memory
+[2026-07-01 17:42:21] User: ساعت چنده؟ | Intent: tool
+[2026-07-01 17:42:34] User: تاریخ امروز چنده؟ | Intent: tool
+[2026-07-01 17:44:46] User: ساعت چنده؟ | Intent: tool
+[2026-07-01 17:47:53] User: ساعت چنده؟ | Intent: tool
+[2026-07-01 18:50:34] User: شغل من چیه؟ | Intent: knowledge
+[2026-07-01 18:50:49] User: ماشینم چیه؟ | Intent: memory
+[2026-07-01 18:50:55] User: اسمم چیه؟ | Intent: memory
+[2026-07-01 18:54:58] User: ماشینم چیه؟ | Intent: memory
+[2026-07-01 18:55:11] User: شغلم چیه؟ | Intent: memory
+[2026-07-01 18:57:16] User: شغل من برنامه نویسیه | Intent: memory
+[2026-07-01 18:57:26] User: سنم ۲۹ | Intent: memory
+[2026-07-01 18:57:35] User: سن من ۲۹ است | Intent: learning
+[2026-07-01 18:57:41] User: سن من چنده؟ | Intent: memory
+[2026-07-01 19:05:12] User: چی از من میدونی؟ | Intent: knowledge
+[2026-07-01 19:06:04] User: nano core/intent.py | Intent: chat
+[2026-07-01 19:06:57] User: چی از من میدونی؟ | Intent: knowledge
+[2026-07-01 19:11:55] User: چی از من میدونی؟ | Intent: memory
+[2026-07-01 19:12:12] User: علیرضا: چی از من میدونی؟ | Intent: memory
+[2026-07-01 19:15:33] User: علیرضا: چی از من میدونی؟ | Intent: memory
+[2026-07-01 19:18:18] User: علیرضا: چی از من می‌دونی؟ | Intent: memory
+[2026-07-01 19:18:33] User: چی از من می‌دونی؟ | Intent: memory
+[2026-07-01 19:24:34] User: علیرضا: سرعت نور چقدره؟ | Intent: knowledge
+[2026-07-01 19:24:42] User: علیرضا: ماشینم چیست؟ | Intent: memory
+[2026-07-01 19:27:40] User: user_text | Intent: memory
+[2026-07-01 19:27:45] User: user_text | Intent: memory
+[2026-07-01 19:27:52] User: user_text | Intent: memory
+[2026-07-01 19:27:58] User: user_text | Intent: knowledge
+[2026-07-01 19:30:18] User: user_text | Intent: memory
+[2026-07-01 19:30:24] User: user_text | Intent: memory
+[2026-07-01 19:30:31] User: user_text | Intent: memory
+[2026-07-01 19:33:27] User: user_text | Intent: knowledge
+[2026-07-01 19:33:32] User: user_text | Intent: chat
+[2026-07-01 19:36:07] User: user_text | Intent: knowledge
+[2026-07-01 19:36:12] User: user_text | Intent: chat
+[2026-07-01 19:37:25] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:37:30] User: سرعت نور توضیح بده | Intent: chat
+[2026-07-01 19:39:14] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:39:22] User: سرعت نور توضیح بده | Intent: knowledge
+[2026-07-01 19:41:19] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:41:31] User: سرعت نور توضیح بده | Intent: knowledge
+[2026-07-01 19:45:58] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:46:04] User: سرعت نور توضیح بده | Intent: knowledge
+[2026-07-01 19:46:11] User: سرعت نور بیشتر بگو | Intent: chat
+[2026-07-01 19:47:57] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:48:05] User: سرعت نور توضیح بده | Intent: knowledge
+[2026-07-01 19:48:12] User: سرعت نور بیشتر بگو | Intent: knowledge
+[2026-07-01 19:50:22] User: سرعت نور چقده؟ | Intent: knowledge
+[2026-07-01 19:50:28] User: سرعت نور توضیح بده | Intent: knowledge
+[2026-07-01 19:50:34] User: سرعت نور بیشتر بگو | Intent: knowledge
+[2026-07-01 19:55:06] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 19:58:53] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 19:59:16] User: مریخ چیست؟ | Intent: knowledge
+[2026-07-01 20:02:33] User: علیرضا: یاد بگیر هوای مریخ سرد و خشک است | Intent: chat
+[2026-07-01 20:05:06] User: یاد بگیر هوای مریخ سرد و خشک است | Intent: teaching
+[2026-07-01 20:05:23] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:09:20] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:11:53] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:18:29] User: یاد بگیر هوای مریخ سرد و خشک است | Intent: teaching
+[2026-07-01 20:18:39] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:21:51] User: یاد بگیر هوای مریخ سرد و خشک است | Intent: teaching
+[2026-07-01 20:22:02] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:24:17] User: یاد بگیر هوای مریخ سرد و خشک است | Intent: teaching
+[2026-07-01 20:24:24] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:46:55] User: چی یاد گرفتی؟ | Intent: knowledge
+[2026-07-01 20:47:19] User: فراموش کن هوای مریخ | Intent: memory
+[2026-07-01 20:47:49] User: چی یاد گرفتی؟ | Intent: knowledge
+[2026-07-01 20:48:09] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:50:00] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:52:10] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:54:13] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 20:54:21] User: مریخ چیست؟ | Intent: knowledge
+[2026-07-01 21:13:13] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 21:13:29] User: چی منتظر یادگیری هست؟ | Intent: knowledge
+[2026-07-01 21:16:43] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 21:18:39] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 21:18:46] User: یاد بگیر هوای مریخ چطوره: سرد و خشک است | Intent: teaching
+[2026-07-01 21:18:54] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 21:20:59] User: یاد بگیر هوای مریخ سرد و خشک است | Intent: chat
+[2026-07-01 21:21:12] User: هوای مریخ چطوره؟ | Intent: knowledge
+[2026-07-01 21:23:34] User: یاد بگیر رنگ مریخ قرمز است | Intent: memory
+[2026-07-01 21:25:05] User: یاد بگیر رنگ مریخ قرمز است | Intent: memory
+[2026-07-01 21:26:37] User: یاد بگیر رنگ مریخ قرمز است | Intent: teaching
+[2026-07-01 21:28:40] User: یاد بگیر رنگ مریخ قرمز است | Intent: teaching
+[2026-07-03 23:49:38] User: مرکز ایران کجاست | Intent: knowledge
+[2026-07-03 23:49:57] User: پایتخت کشور ایران چیست | Intent: knowledge
+[2026-07-04 00:14:08] User: پایتخت ایران چیست | Intent: knowledge
+[2026-07-04 00:14:22] User: پایتخت ایران | Intent: chat
+[2026-07-04 00:14:38] User: پایتخت کشور ایران چیست | Intent: knowledge
+[2026-07-04 00:17:44] User: پایتخت ایران کجاست | Intent: knowledge
+[2026-07-04 00:17:51] User: پایتخت ایران | Intent: chat
+[2026-07-04 00:18:02] User: مرکز ایران کجاست | Intent: knowledge
+[2026-07-04 00:21:11] User: پایتخت ایران | Intent: chat
+[2026-07-04 00:21:24] User: سرعت نور | Intent: chat
+[2026-07-04 00:21:33] User: جمعیت ایران | Intent: chat
+[2026-07-04 00:26:32] User: پایتخت ایران | Intent: chat
+[2026-07-04 00:32:35] User: پایتخت ایران | Intent: chat
+[2026-07-04 00:36:28] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:36:39] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:36:44] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:36:55] User: مرمز ایران کجاست | Intent: knowledge
+[2026-07-04 00:37:03] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:37:08] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:43:02] User: پاتخت ایران | Intent: knowledge
+[2026-07-04 00:43:06] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:43:11] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:43:17] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 00:46:48] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:46:52] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 00:46:56] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:47:02] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:51:29] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:51:33] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:51:36] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:51:43] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 00:54:39] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:54:42] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:54:46] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 00:54:50] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:57:28] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 00:57:32] User: مرکز ایران | Intent: knowledge
+[2026-07-04 00:57:35] User: سرعت نور | Intent: knowledge
+[2026-07-04 00:57:39] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:04:31] User: پاتخت ایران | Intent: knowledge
+[2026-07-04 01:04:35] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:04:39] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:04:43] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:05:50] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:18:37] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:18:46] User: مرمر ایران | Intent: knowledge
+[2026-07-04 01:18:52] User: جعیمت ایران | Intent: knowledge
+[2026-07-04 01:18:58] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:27:51] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:28:00] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:28:10] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:28:15] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:28:25] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:32:15] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:32:20] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:32:25] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:32:30] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:32:39] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:37:15] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:37:24] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:37:29] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:37:33] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:40:28] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:40:33] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:40:38] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:40:47] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:43:27] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:43:30] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:43:35] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:43:38] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:48:32] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:48:35] User: مرکز ایران | Intent: knowledge
+[2026-07-04 01:48:40] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:48:44] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:52:26] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:57:36] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 01:57:43] User: سرعت نور | Intent: knowledge
+[2026-07-04 01:57:48] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 01:57:53] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:02:07] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:02:14] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:02:29] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:02:33] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:05:06] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:05:13] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:05:19] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:05:23] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:07:59] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:08:03] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:08:11] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:08:15] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:16:13] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:16:16] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:16:19] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:16:23] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:18:51] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:18:54] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:18:58] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:19:03] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:24:43] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:24:47] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:24:51] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:24:54] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:31:53] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:31:57] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:32:01] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:32:05] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:36:39] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:36:42] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:36:45] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:36:49] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:39:56] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:39:56] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 02:40:01] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:40:01] [ROUTER] knowledge hit | سرعت نور
+[2026-07-04 02:40:04] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:40:08] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:42:28] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:42:28] [ROUTER] knowledge hit | سرعت نور
+[2026-07-04 02:42:33] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:42:37] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:42:37] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 02:42:41] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:51:38] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:51:38] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 02:51:42] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:51:42] [ROUTER] knowledge hit | سرعت نور
+[2026-07-04 02:51:52] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:51:56] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:54:04] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:54:04] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 02:54:09] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:54:12] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:54:12] [ROUTER] knowledge hit | سرعت نور
+[2026-07-04 02:54:16] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:59:06] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 02:59:06] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 02:59:11] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 02:59:11] [ROUTER] knowledge hit | جمعیت ایران
+[2026-07-04 02:59:20] User: مرکز ایران | Intent: knowledge
+[2026-07-04 02:59:20] [ROUTER] knowledge hit | مرکز ایران
+[2026-07-04 02:59:30] User: هوای مریخ | Intent: chat
+[2026-07-04 02:59:44] User: سرعت نور | Intent: knowledge
+[2026-07-04 02:59:44] [ROUTER] knowledge hit | سرعت نور
+[2026-07-04 03:04:05] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 03:04:05] [ROUTER] knowledge hit | پایتخت ایران
+[2026-07-04 03:04:10] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 03:04:10] [ROUTER] knowledge hit | جمعیت ایران
+[2026-07-04 03:04:15] User: مرکز ایران | Intent: knowledge
+[2026-07-04 03:04:15] [ROUTER] knowledge hit | مرکز ایران
+[2026-07-04 03:06:45] User: پایتخت ایران | Intent: knowledge
+[2026-07-04 03:06:50] User: جمعیت ایران | Intent: knowledge
+[2026-07-04 03:07:00] User: مرکز ایران | Intent: knowledge
+[2026-07-04 03:09:53] User: پایتخت ایران | Intent: knowledge
