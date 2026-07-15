@@ -16,6 +16,11 @@ boot()
 memory = Memory()
 planner = Planner(memory)
 skill_engine = SkillEngine(memory, cortex)
+from core.skill_registry import get_skills
+
+cortex.set_skills(
+    get_skills()
+)
 context_memory = ContextMemory()
 
 kernel = Kernel(memory, planner, skill_engine, context_memory)
