@@ -1,0 +1,87 @@
+"""
+Sepehr2 Cortex Engine
+مدیریت اجرای سرویس‌های Cortex
+"""
+
+import time
+import traceback
+
+
+class CortexEngine:
+    def __init__(self, registry):
+        self.registry = registry
+
+        self.before_hooks = []
+        self.after_hooks = []
+
+        self.middleware = []
+
+        self.stats = {
+            "runs": 0,
+            "errors": 0,
+            "total_time": 0.0,
+        }
+
+    def add_before_hook(self, func):
+        self.before_hooks.append(func)
+
+    def add_after_hook(self, func):
+        self.after_hooks.append(func)
+
+    def add_middleware(self, func):
+        self.middleware.append(func)
+
+    def execute(self, service_name, *args, **kwargs):
+
+        if not self.registry.has(service_name):
+            raise KeyError(f"Service '{service_name}' not found.")
+
+        service = self.registry.get(service_name)
+
+        start = time.perf_counter()
+
+        try:
+
+            for hook in self.before_hooks:
+                hook(service_name)
+
+            for mw in self.middleware:
+                mw(service_name)
+
+            result = service(*args, **kwargs)
+
+            for hook in self.after_hooks:
+                hook(service_name, result)
+
+            elapsed = time.perf_counter() - start
+
+            self.stats["runs"] += 1
+            self.stats["total_time"] += elapsed
+
+            return result
+
+        except Exception:
+
+            self.stats["errors"] += 1
+
+            traceback.print_exc()
+
+            raise
+
+    def average_time(self):
+
+        if self.stats["runs"] == 0:
+            return 0
+
+        return self.stats["total_time"] / self.stats["runs"]
+
+    def report(self):
+
+        return {
+            "runs": self.stats["runs"],
+            "errors": self.stats["errors"],
+            "average_time": self.average_time(),
+            "middlewares": len(self.middleware),
+            "before_hooks": len(self.before_hooks),
+            "after_hooks": len(self.after_hooks),
+        }
