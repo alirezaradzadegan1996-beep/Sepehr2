@@ -27,21 +27,26 @@ class SkillEngine:
         print("[SkillEngine] Intent:", intent)
 
 
-        # دریافت Skill ها از Cortex SkillManager
+        # -------------------------
+        # Load Skills from Cortex API
+        # -------------------------
 
         skills = []
 
         if self.cortex:
 
             try:
-                skills = self.cortex.skill_manager.skills
+                skills = self.cortex.get_skills()
 
-            except Exception:
+            except Exception as e:
+                print("[Cortex] Skill loading error:", e)
                 skills = []
 
 
         if not skills:
+
             print("[Cortex] No skills available")
+
             return None
 
 
