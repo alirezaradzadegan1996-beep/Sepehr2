@@ -11,16 +11,28 @@ from .skill_manager import SkillManager
 class Cortex:
 
     def __init__(self):
+
         self.registry = registry
         self.engine = CortexEngine(self.registry)
+
+        # Skill Management
         self.skill_manager = SkillManager()
 
 
+    # -------------------------
+    # Service Registry
+    # -------------------------
+
     def register(self, name, service):
-        self.registry.register(name, service)
+
+        self.registry.register(
+            name,
+            service
+        )
 
 
     def register_safe(self, name, service):
+
         return self.registry.register_safe(
             name,
             service
@@ -28,18 +40,27 @@ class Cortex:
 
 
     def unregister(self, name):
+
         self.registry.unregister(name)
 
 
     def has(self, name):
+
         return self.registry.has(name)
 
 
     def get(self, name):
+
         return self.registry.get(name)
 
 
+
+    # -------------------------
+    # Service Execution
+    # -------------------------
+
     def execute(self, name, *args, **kwargs):
+
         return self.engine.execute(
             name,
             *args,
@@ -47,8 +68,11 @@ class Cortex:
         )
 
 
+
     def services(self):
+
         return self.registry.list()
+
 
 
     # -------------------------
@@ -56,27 +80,54 @@ class Cortex:
     # -------------------------
 
     def set_skills(self, skills):
-        self.skill_manager = SkillManager(skills)
+
+        self.skill_manager = SkillManager(
+            skills
+        )
+
+
+    def get_skills(self):
+
+        return self.skill_manager.skills
+
 
 
     def find_skill(self, text, intent=None):
+
         return self.skill_manager.find(
             text,
             intent
         )
 
 
+
     def skills(self):
+
         return self.skill_manager.list()
 
 
+
+    # -------------------------
+    # System Status
+    # -------------------------
+
     def status(self):
+
         return {
+
             "services": self.registry.list(),
+
             "engine": self.engine.report(),
+
             "skills": self.skill_manager.list()
+
         }
 
+
+
+    # -------------------------
+    # Health Check
+    # -------------------------
 
     def health(self):
 
@@ -87,10 +138,16 @@ class Cortex:
             obj = self.registry.get(service)
 
             result[service] = {
+
                 "status": "ok",
+
                 "type": type(obj).__name__
+
             }
 
+
         return result
+
+
 
 cortex = Cortex()
