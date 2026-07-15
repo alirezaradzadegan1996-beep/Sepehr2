@@ -6,6 +6,8 @@ from core.context_memory import ContextMemory
 
 from core.cortex.bootstrap import boot
 from core.cortex.cortex import cortex
+from core.cortex.skill_manager import SkillManager
+from core.skill_registry import get_skills
 
 
 # Boot Sepehr OS

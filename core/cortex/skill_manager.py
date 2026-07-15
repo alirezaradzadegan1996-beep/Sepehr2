@@ -1,6 +1,6 @@
 """
 Sepehr2 Cortex Skill Manager
-مدیریت و انتخاب Skill ها
+مدیریت چرخه زندگی Skill ها
 """
 
 from core.skill_router import choose_skill
@@ -17,6 +17,10 @@ class SkillManager:
             self.skills.append(skill)
 
 
+    def all(self):
+        return self.skills
+
+
     def list(self):
         return [
             getattr(skill, "NAME", "Unknown")
@@ -24,23 +28,43 @@ class SkillManager:
         ]
 
 
+    def count(self):
+        return len(self.skills)
+
+
     def find(self, text, intent=None):
 
-        # مسیر مستقیم intent
+        # Direct Intent Routing
         if intent:
 
             for skill in self.skills:
 
-                name = getattr(skill, "NAME", "").lower()
+                name = getattr(
+                    skill,
+                    "NAME",
+                    ""
+                ).lower()
+
 
                 if intent == "math" and name == "math":
                     return skill
+
 
                 if intent == "project" and name == "project":
                     return skill
 
 
-        # مسیر هوشمند
+                if intent == "greeting" and name == "greeting":
+                    return skill
+
+
+                if intent == "memory" and name == "memory":
+                    return skill
+
+
+
+        # Smart Routing
+
         skill, confidence = choose_skill(
             text,
             self.skills

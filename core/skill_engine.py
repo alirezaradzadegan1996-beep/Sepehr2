@@ -39,12 +39,9 @@ class SkillEngine:
                 skills = []
 
 
-        # اگر Cortex هنوز Skills نداشت
         if not skills:
-
-            from core.skill_registry import get_skills
-
-            skills = get_skills()
+            print("[Cortex] No skills available")
+            return None
 
 
 
