@@ -20,6 +20,13 @@ class Cortex:
         self.registry.register(name, service)
 
 
+    def register_safe(self, name, service):
+        return self.registry.register_safe(
+            name,
+            service
+        )
+
+
     def unregister(self, name):
         self.registry.unregister(name)
 
@@ -70,5 +77,20 @@ class Cortex:
             "skills": self.skill_manager.list()
         }
 
+
+    def health(self):
+
+        result = {}
+
+        for service in self.registry.list():
+
+            obj = self.registry.get(service)
+
+            result[service] = {
+                "status": "ok",
+                "type": type(obj).__name__
+            }
+
+        return result
 
 cortex = Cortex()

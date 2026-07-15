@@ -14,6 +14,14 @@ class ServiceRegistry:
             raise ValueError(f"Service '{name}' already registered.")
         self._services[name] = service
 
+    def register_safe(self, name, service):
+        if name in self._services:
+            self._services[name] = service
+            return False
+
+        self._services[name] = service
+        return True
+
     def unregister(self, name):
         return self._services.pop(name, None)
 
