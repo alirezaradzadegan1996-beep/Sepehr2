@@ -1,0 +1,415 @@
+[
+    {
+        "id": "87bcd2d3",
+        "name": "یک اپ فروشگاه بساز",
+        "type": "ecommerce",
+        "status": "completed",
+        "date": "2026-07-09 14:59:27.008902"
+    },
+    {
+        "id": "cba2cdeb",
+        "name": "یک اپ ماشین حساب بساز",
+        "type": "calculator",
+        "status": "completed",
+        "date": "2026-07-12 00:10:57.042653",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "655ff4e7",
+        "name": "یک اپ ماشین حساب بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:24:51",
+        "feedback_score": 10,
+        "experience_successes": 1,
+        "experience_failures": 0,
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "9b4ddeff",
+        "name": "یک اپ ماشین حساب جدید بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:26:15",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "21ff5f8e",
+        "name": "یک ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:39:31",
+        "feedback_score": 50,
+        "experience_successes": 5,
+        "experience_failures": 0,
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "895182fb",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:46:23",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "29b241fb",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:46:23",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "c238a290",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:48:26",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "ddacfa02",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:48:26",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "a0bcc976",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py",
+            "history.py",
+            "validator.py",
+            "errors.py",
+            "operations.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n✅ history.py موجود است\n✅ validator.py موجود است\n✅ errors.py موجود است\n✅ operations.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ تست موفق",
+        "date": "2026-07-12T00:55:02",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "c025ac18",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py",
+            "history.py",
+            "validator.py",
+            "errors.py",
+            "operations.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n✅ history.py موجود است\n✅ validator.py موجود است\n✅ errors.py موجود است\n✅ operations.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ calculator test passed\n\n✅ تست موفق",
+        "date": "2026-07-12T00:58:05",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    },
+    {
+        "id": "c4dcc5d5",
+        "name": "ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+        "type": "calculator",
+        "status": "completed",
+        "architecture": [
+            "Calculation Engine",
+            "Input Handler"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py",
+            "history.py",
+            "validator.py",
+            "errors.py",
+            "operations.py"
+        ],
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "suggestions": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ],
+        "test_status": "passed",
+        "test_result": "🧪 تست هوشمند پروژه\n\nنوع پروژه: calculator\n\n📁 بررسی فایل‌ها:\n✅ main.py موجود است\n✅ calculator.py موجود است\n✅ test.py موجود است\n✅ history.py موجود است\n✅ validator.py موجود است\n✅ errors.py موجود است\n✅ operations.py موجود است\n\n▶️ اجرای برنامه موفق بود\n\n✅ calculator test passed\n\n✅ تست موفق",
+        "date": "2026-07-12T00:58:32",
+        "evolution_applied": true,
+        "evolution_features": [
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید"
+        ]
+    }
+]

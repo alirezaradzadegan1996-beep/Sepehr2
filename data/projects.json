@@ -1,4 +1,10 @@
 {
-    "active_project": null,
-    "projects": {}
+    "active": "برام_اپ_ماشین_حساب_بساز",
+    "projects": {
+        "برام_اپ_ماشین_حساب_بساز": {
+            "task": "برام اپ ماشین حساب بساز",
+            "step": 9,
+            "status": "running"
+        }
+    }
 }

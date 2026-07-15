@@ -2,9 +2,19 @@ def detect_intent(text):
 
     text = text.strip().lower()
 
-    # آموزش همیشه اولویت دارد
+
+    # -------------------------
+    # Teaching
+    # -------------------------
+
     if text.startswith("یاد بگیر"):
         return "teaching"
+
+
+
+    # -------------------------
+    # Greeting
+    # -------------------------
 
     greetings = [
         "سلام",
@@ -13,7 +23,35 @@ def detect_intent(text):
         "شب بخیر"
     ]
 
+
+
+    # -------------------------
+    # Project
+    # -------------------------
+
+    project_words = [
+        "پروژه",
+        "اپ",
+        "برنامه",
+        "بساز",
+        "طراحی کن",
+        "ادامه پروژه",
+        "وضعیت پروژه",
+        "بعدی"
+    ]
+
+
+
+    # -------------------------
+    # Memory
+    # -------------------------
+
     memory_words = [
+        "من کی هستم",
+        "من کی‌ام",
+        "درباره من",
+        "اطلاعات من",
+        "مشخصات من",
         "اسم",
         "ماشین",
         "شغل",
@@ -23,13 +61,48 @@ def detect_intent(text):
         "چی از من می‌دونی",
         "چی می‌دونی",
         "حافظه",
-        "فراموش کن"
+        "فراموش کن",
+        "تاریخچه",
+        "آخرین سوال",
+        "آخرین سوالام",
+        "مکالمات",
+        "صحبت های قبلی",
+        "قبلا چی گفتیم"
     ]
+
+
+
+    # -------------------------
+    # Tools
+    # -------------------------
 
     tool_words = [
         "ساعت",
         "تاریخ"
     ]
+
+
+
+    # -------------------------
+    # Math
+    # -------------------------
+
+    math_words = [
+        "+",
+        "-",
+        "*",
+        "/",
+        "چند میشه",
+        "چقدر میشه",
+        "حساب کن",
+        "محاسبه کن"
+    ]
+
+
+
+    # -------------------------
+    # Knowledge
+    # -------------------------
 
     knowledge_words = [
         "چی",
@@ -46,6 +119,7 @@ def detect_intent(text):
         "چرا"
     ]
 
+
     knowledge_keywords = [
         "پایتخت",
         "مرکز",
@@ -61,23 +135,50 @@ def detect_intent(text):
         "ماه"
     ]
 
+
+
+    # -------------------------
+    # Priority
+    # -------------------------
+
     if text in greetings:
         return "greeting"
+
+
+    for word in math_words:
+        if word in text:
+            return "math"
+
+
+
+    for word in project_words:
+        if word in text:
+            return "project"
+
+
 
     for word in tool_words:
         if word in text:
             return "tool"
 
+
+
     for word in memory_words:
         if word in text:
             return "memory"
+
+
 
     for word in knowledge_words:
         if word in text:
             return "knowledge"
 
+
+
     for word in knowledge_keywords:
         if word in text:
             return "knowledge"
+
+
 
     return "chat"

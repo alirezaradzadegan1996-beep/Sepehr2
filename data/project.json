@@ -1,0 +1,240 @@
+{
+    "id": "3693522c",
+    "goal": "برام یک اپ ماشین حساب بساز",
+    "status": "active",
+    "created_at": "2026-07-15T19:00:07",
+    "updated_at": "2026-07-15T19:00:07",
+    "step": 0,
+    "steps": [
+        "تحلیل درخواست",
+        "طراحی راه‌حل",
+        "ساخت فایل‌ها",
+        "نوشتن کد",
+        "تست",
+        "رفع خطاها",
+        "تحویل پروژه"
+    ],
+    "analysis": {
+        "type": "calculator",
+        "features": [
+            "اضافه کردن عملیات بیشتر",
+            "مدیریت خطا",
+            "رابط کاربری",
+            "افزودن تاریخچه محاسبات",
+            "اعتبارسنجی ورودی‌ها",
+            "مدیریت تقسیم بر صفر",
+            "ساختار قابل توسعه برای عملیات جدید",
+            "تاریخچه محاسبات",
+            "ساختار قابل توسعه",
+            "validator"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "test.py",
+            "history.py",
+            "validator.py",
+            "errors.py"
+        ],
+        "reasoning": {
+            "goal": "برام یک اپ ماشین حساب بساز",
+            "architecture": [
+                "Calculation Engine",
+                "Input Handler"
+            ],
+            "modules": [
+                "main.py",
+                "calculator.py",
+                "test.py",
+                "history.py",
+                "validator.py",
+                "errors.py"
+            ],
+            "suggestions": [
+                "اضافه کردن عملیات بیشتر",
+                "مدیریت خطا",
+                "رابط کاربری",
+                "افزودن تاریخچه محاسبات",
+                "اعتبارسنجی ورودی‌ها",
+                "مدیریت تقسیم بر صفر",
+                "ساختار قابل توسعه برای عملیات جدید",
+                "تاریخچه محاسبات",
+                "ساختار قابل توسعه",
+                "validator"
+            ],
+            "type": "calculator",
+            "experience": {
+                "found": true,
+                "project_type": "calculator",
+                "projects_count": 10,
+                "confidence": "high",
+                "experience_successes": 5,
+                "experience_failures": 0,
+                "best_project_id": "21ff5f8e",
+                "best_project_name": "یک ماشین حساب حرفه‌ای با مدیریت خطا بساز",
+                "best_score": 170,
+                "architecture": [
+                    "Calculation Engine",
+                    "Input Handler"
+                ],
+                "files": [
+                    "main.py",
+                    "calculator.py",
+                    "test.py"
+                ],
+                "features": [
+                    "اضافه کردن عملیات بیشتر",
+                    "مدیریت خطا",
+                    "رابط کاربری"
+                ],
+                "suggestions": [
+                    "اضافه کردن عملیات بیشتر",
+                    "مدیریت خطا",
+                    "رابط کاربری"
+                ]
+            },
+            "experience_used": true,
+            "reasoning_source": "base_reasoning+trusted_project_experience+experience_evolution",
+            "experience_confidence": "medium",
+            "evolution": {
+                "evolved": true,
+                "source_project_id": "21ff5f8e",
+                "goal": "برام یک اپ ماشین حساب بساز",
+                "architecture": [
+                    "Calculation Engine",
+                    "Input Handler"
+                ],
+                "modules": [
+                    "main.py",
+                    "calculator.py",
+                    "test.py"
+                ],
+                "suggestions": [
+                    "اضافه کردن عملیات بیشتر",
+                    "مدیریت خطا",
+                    "رابط کاربری",
+                    "افزودن تاریخچه محاسبات",
+                    "اعتبارسنجی ورودی‌ها",
+                    "مدیریت تقسیم بر صفر",
+                    "ساختار قابل توسعه برای عملیات جدید"
+                ],
+                "improvements": [
+                    "افزودن تاریخچه محاسبات",
+                    "اعتبارسنجی ورودی‌ها",
+                    "مدیریت تقسیم بر صفر",
+                    "ساختار قابل توسعه برای عملیات جدید"
+                ]
+            },
+            "experience_evolved": true,
+            "experience_memory": {
+                "found": true,
+                "type": "calculator",
+                "confidence": "medium",
+                "success_count": 2,
+                "features": [
+                    "مدیریت خطا",
+                    "تاریخچه محاسبات"
+                ],
+                "files": [
+                    "main.py",
+                    "calculator.py",
+                    "history.py",
+                    "validator.py"
+                ],
+                "suggestions": [
+                    "ساختار قابل توسعه"
+                ]
+            },
+            "learned_files": [
+                "main.py",
+                "calculator.py",
+                "history.py",
+                "validator.py"
+            ],
+            "learned_features": [
+                "مدیریت خطا",
+                "تاریخچه محاسبات"
+            ],
+            "experience_memory_used": true,
+            "experience_source": "ExperienceMemory",
+            "learning": {
+                "project_type": "calculator",
+                "experience": {
+                    "found": true,
+                    "type": "calculator",
+                    "confidence": "medium",
+                    "success_count": 2,
+                    "features": [
+                        "مدیریت خطا",
+                        "تاریخچه محاسبات"
+                    ],
+                    "files": [
+                        "main.py",
+                        "calculator.py",
+                        "history.py",
+                        "validator.py"
+                    ],
+                    "suggestions": [
+                        "ساختار قابل توسعه"
+                    ]
+                },
+                "repairs": [],
+                "suggestions": [
+                    "تاریخچه محاسبات",
+                    "مدیریت خطا"
+                ]
+            }
+        },
+        "knowledge": {
+            "used": true,
+            "project_type": "calculator",
+            "patterns": [
+                "مدیریت خطا",
+                "validator"
+            ],
+            "previous_errors": [
+                "ImportError"
+            ]
+        },
+        "learned_files": [
+            "main.py",
+            "calculator.py",
+            "history.py",
+            "validator.py"
+        ],
+        "optimization": {
+            "folders": [],
+            "files": [
+                "main.py",
+                "calculator.py",
+                "test.py",
+                "history.py",
+                "validator.py",
+                "errors.py",
+                "operations.py"
+            ],
+            "dependencies": [],
+            "database": null,
+            "testing": true,
+            "quality": [
+                "README",
+                "UTF-8"
+            ],
+            "experience_applied": true,
+            "experience_files": [
+                "main.py",
+                "calculator.py",
+                "history.py",
+                "validator.py"
+            ],
+            "knowledge_applied": true,
+            "evolution_applied": true,
+            "evolution_files": [
+                "history.py",
+                "validator.py",
+                "errors.py",
+                "operations.py"
+            ]
+        }
+    }
+}

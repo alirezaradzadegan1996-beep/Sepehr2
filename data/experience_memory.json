@@ -1,0 +1,24 @@
+{
+    "calculator": {
+        "success_count": 2,
+        "features": [
+            "مدیریت خطا",
+            "تاریخچه محاسبات"
+        ],
+        "files": [
+            "main.py",
+            "calculator.py",
+            "history.py",
+            "validator.py"
+        ],
+        "suggestions": [
+            "ساختار قابل توسعه"
+        ]
+    },
+    "general": {
+        "success_count": 0,
+        "features": [],
+        "files": [],
+        "suggestions": []
+    }
+}

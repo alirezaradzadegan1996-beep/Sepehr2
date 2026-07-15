@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
+*.tar.gz
+
+*_backup*.py
+*_backup_*.py

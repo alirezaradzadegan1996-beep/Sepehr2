@@ -1,0 +1,16 @@
+{
+    "calculator": {
+        "successful_patterns": [
+            "مدیریت خطا",
+            "validator"
+        ],
+        "common_errors": [
+            "ImportError"
+        ],
+        "solutions": [
+            "بازسازی errors.py"
+        ],
+        "projects_count": 1,
+        "updated": 1783816971.5093863
+    }
+}

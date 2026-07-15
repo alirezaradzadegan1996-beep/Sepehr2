@@ -109,7 +109,8 @@ class Kernel:
 
 
             plan = self.planner.create_plan(
-                user_input
+                user_input,
+                intent
             )
 
 
@@ -136,7 +137,8 @@ class Kernel:
 
 
         plan = self.planner.create_plan(
-            user_input
+            user_input,
+            intent
         )
 
 

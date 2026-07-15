@@ -1,62 +1,87 @@
-# core/brain.py
-
-from core.cortex.bootstrap import boot
-
-boot()
-from core.matcher import get_best_match
-from core.tools import run_tool
-from core.decision import decide
-
-
-def think(text):
-    """
-    مغز اصلی سپهر
-    """
-
-    print("========================================")
-    print("        سپهر 2.0")
-    print("========================================")
-    print("برای خروج بنویس: خروج\n")
-
-    # -------------------------
-    # مرحله 1: تشخیص تصمیم
-    # -------------------------
-
-    concepts = []  # اگر later concept system داری اینو وصل می‌کنیم
-
-    decision = decide(text, concepts)
-    print(f"[DECISION]: {decision}")
-
-    route = decision["route"]
-
-    # -------------------------
-    # مرحله 2: مسیر دهی
-    # -------------------------
-
-    if route == "knowledge":
-        return handle_knowledge(text)
-
-    if route in ["ads", "design", "code"]:
-        return run_tool(route, text)
-
-    return "❌ هیچ مسیری پیدا نشد"
+from core.intent import detect_intent
+from core.memory_parser import parse_memory
+from core.personal_memory import (
+    remember,
+    recall,
+    memory_summary,
+    forget
+)
+from core.feedback_handler import (
+    handle_feedback,
+    set_last_question
+)
+from core.ai_router import route
+from core.conversation_memory import add_message, show_history
 
 
-# -------------------------
-# بخش دانش (Knowledge Mode)
-# -------------------------
+def process(text):
 
-def handle_knowledge(text):
-    """
-    سیستم ساده دانش
-    """
+    text = text.strip()
 
-    best = get_best_match(text)
 
-    if not best:
-        print("سپهر: این مورد را هنوز یاد نگرفتم ❌")
-        return None
+    # ---------- Feedback ----------
+    feedback = handle_feedback(text)
 
-    answer = best.get("answer", "❌ پاسخی ندارم")
-    print(f"سپهر: {answer}")
+    if feedback:
+        return feedback
+
+
+    # ---------- Personal Memory ----------
+    memory = parse_memory(text)
+
+    if memory:
+
+        return remember(
+            memory["key"],
+            memory["value"]
+        )
+
+
+    # ---------- Intent ----------
+    intent = detect_intent(text)
+
+
+    if intent == "memory":
+
+        if "آخرین" in text or "تاریخچه" in text:
+
+            return show_history()
+
+
+        if "من کی هستم" in text:
+
+            return memory_summary()
+
+
+        if "فراموش کن" in text:
+
+            if "اسم" in text:
+                return forget("name")
+
+            if "شهر" in text:
+                return forget("city")
+
+            if "سن" in text:
+                return forget("age")
+
+            if "شغل" in text:
+                return forget("job")
+
+            if "هدف" in text:
+                return forget("goals")
+
+            if "علاقه" in text:
+                return forget("interests")
+
+
+    # ---------- AI ----------
+    set_last_question(text)
+
+    answer = route(text)
+
+    add_message(
+        text,
+        answer
+    )
+
     return answer

@@ -1,41 +1,66 @@
-# core/matcher.py (DISABLED - semantic mode active)
+import re
+
+
+STOP_WORDS = [
+    "چقدر",
+    "چند",
+    "چیست",
+    "چی",
+    "است",
+    "تا",
+    "فاصله",
+    "هست",
+    "را",
+    "رو",
+    "در",
+    "از",
+    "به",
+    "میشه",
+    "میباشد",
+    "؟",
+    "?"
+]
+
+
+WEIGHTS = {
+    "مساحت": 5,
+    "جمعیت": 5,
+    "پایتخت": 5,
+    "خورشید": 5,
+    "ماه": 5,
+    "مریخ": 5,
+    "سرعت": 4,
+    "نور": 4,
+    "فاصله": 1,
+    "زمین": 1
+}
+
+
+def normalize(text):
+
+    text = text.lower()
+
+    for word in STOP_WORDS:
+        text = text.replace(word, "")
+
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
+
+
 
 def similarity(text1, text2):
-    return 0
 
-def get_best_match(text, concepts):
-    """
-    پیدا کردن بهترین جواب از knowledge base
-    """
+    text1 = normalize(text1)
+    text2 = normalize(text2)
 
-    from core.knowledge import KNOWLEDGE_BASE
+    words1 = set(text1.split())
+    words2 = set(text2.split())
 
-    best_score = 0
-    best_answer = None
+    score = 0
 
-    print(f"[DEBUG TEXT]: '{text}'")
+    for word in words1.intersection(words2):
 
-    for key, value in KNOWLEDGE_BASE.items():
+        score += WEIGHTS.get(word, 1)
 
-        score = 0
-
-        # تطبیق ساده متنی
-        if key in text:
-            score += 1
-
-        # اگر concept ها مشترک بودن
-        if hasattr(value, "concepts"):
-            if concepts & set(value.concepts):
-                score += 2
-
-        print(f"[DEBUG MATCH] key={key} | score={score}")
-
-        if score > best_score:
-            best_score = score
-            best_answer = value.answer if hasattr(value, "answer") else value
-
-    if best_score == 0:
-        return None
-
-    print(f"[Knowledge Score]: {best_score}")
-    return best_answer
+    return score

@@ -7,7 +7,6 @@ from core.learning_queue import remove_question
 FILE = "data/knowledge.json"
 
 
-
 def teach(text):
 
     if not text.startswith("یاد بگیر"):
@@ -37,13 +36,10 @@ def teach(text):
 
 
         if answer:
-
             answer = answer + " است"
 
 
-
     else:
-
         return None
 
 
@@ -68,7 +64,20 @@ def teach(text):
 
 
 
-    data[question] = answer
+    # اگر جواب قبلی ساده بود، تبدیلش کن
+    old = data.get(question)
+
+    if isinstance(old, dict):
+
+        old["answer"] = answer
+
+    else:
+
+        data[question] = {
+            "answer": answer,
+            "confidence": 1,
+            "source": "learned"
+        }
 
 
 

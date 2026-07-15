@@ -6,47 +6,87 @@ from core.context_memory import ContextMemory
 
 from core.cortex.bootstrap import boot
 from core.cortex.cortex import cortex
-from core.cortex.skill_manager import SkillManager
-from core.skill_registry import get_skills
 
 
-# Boot Sepehr OS
-boot()
+def create_system():
+
+    # Boot Sepehr OS
+    boot()
+
+    memory = Memory()
+
+    planner = Planner(memory)
+
+    skill_engine = SkillEngine(
+        memory,
+        cortex
+    )
+
+    context_memory = ContextMemory()
 
 
-# Create core services
-memory = Memory()
-planner = Planner(memory)
-skill_engine = SkillEngine(memory, cortex)
-from core.skill_registry import get_skills
-
-cortex.set_skills(
-    get_skills()
-)
-context_memory = ContextMemory()
-
-kernel = Kernel(memory, planner, skill_engine, context_memory)
+    kernel = Kernel(
+        memory,
+        planner,
+        skill_engine,
+        context_memory
+    )
 
 
-# Register services in Cortex
-cortex.register("memory", memory)
-cortex.register("planner", planner)
-cortex.register("context", context_memory)
-cortex.register("kernel", kernel)
+    # Register Cortex services
+
+    cortex.register(
+        "memory",
+        memory
+    )
+
+    cortex.register(
+        "planner",
+        planner
+    )
+
+    cortex.register(
+        "context",
+        context_memory
+    )
+
+    cortex.register(
+        "kernel",
+        kernel
+    )
 
 
-# Start Kernel
-kernel.start()
+    return kernel
 
 
-# Main Loop
-while True:
-    user_input = input("\nعلیرضا: ")
 
-    if user_input == "خروج":
-        print("سپهر: خداحافظ ❤️")
-        break
+kernel = None
 
-    result = kernel.process(user_input)
 
-    print("\nسپهر:", result)
+def run():
+
+    global kernel
+
+    kernel = create_system()
+
+    kernel.start()
+
+
+    while True:
+
+        user_input = input("\nعلیرضا: ")
+
+        if user_input == "خروج":
+            print("سپهر: خداحافظ ❤️")
+            break
+
+
+        result = kernel.process(user_input)
+
+        print("\nسپهر:", result)
+
+
+
+if __name__ == "__main__":
+
+    run()
