@@ -6,17 +6,17 @@ def boot():
 
     print("🧠 Booting Sepehr OS...\n")
 
-    services = {
-        "skills": get_skills()
-    }
+
+    # Load skills into Cortex SkillManager
+
+    skills = get_skills()
+
+    cortex.set_skills(
+        skills
+    )
 
 
-    for name, service in services.items():
-
-        if not cortex.has(name):
-            cortex.register(name, service)
-
-        print(f"✅ {name} ready")
+    print("✅ skills ready")
 
 
     modules = [
@@ -33,5 +33,6 @@ def boot():
 
 
     print("\n🚀 Sepehr OS Ready")
+
 
     return cortex

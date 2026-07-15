@@ -27,13 +27,14 @@ class SkillEngine:
         print("[SkillEngine] Intent:", intent)
 
 
-        # دریافت Skill ها از Cortex
+        # دریافت Skill ها از Cortex SkillManager
+
         skills = []
 
         if self.cortex:
 
             try:
-                skills = self.cortex.get("skills")
+                skills = self.cortex.skill_manager.skills
 
             except Exception:
                 skills = []
