@@ -1,5 +1,9 @@
+"""
+Sepehr2 Cortex Bootstrap
+راه‌اندازی اولیه سرویس‌های Cortex
+"""
+
 from core.cortex.cortex import cortex
-from core.skill_registry import get_skills
 
 
 def boot():
@@ -7,28 +11,32 @@ def boot():
     print("🧠 Booting Sepehr OS...\n")
 
 
-    # Load skills into Cortex SkillManager
+    # -------------------------
+    # Auto Load Skills
+    # -------------------------
 
-    skills = get_skills()
-
-    cortex.set_skills(
-        skills
-    )
-
+    skills = cortex.load_skills()
 
     print("✅ skills ready")
 
 
+    # -------------------------
+    # Core Modules Status
+    # -------------------------
+
     modules = [
+
         "memory",
         "knowledge",
         "planner",
         "reasoning",
         "decision",
+
     ]
 
 
     for module in modules:
+
         print(f"✅ {module} ready")
 
 

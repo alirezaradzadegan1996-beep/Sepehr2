@@ -86,6 +86,22 @@ class Cortex:
         )
 
 
+    def load_skills(self):
+        """
+        Load all available skills into Cortex SkillManager.
+        """
+
+        from core.skill_registry import get_skills
+
+        skills = get_skills()
+
+        self.skill_manager = SkillManager(
+            skills=skills
+        )
+
+        return skills
+
+
     def get_skills(self):
 
         return self.skill_manager.skills
