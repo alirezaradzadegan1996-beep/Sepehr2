@@ -15,7 +15,7 @@ boot()
 # Create core services
 memory = Memory()
 planner = Planner(memory)
-skill_engine = SkillEngine(memory)
+skill_engine = SkillEngine(memory, cortex)
 context_memory = ContextMemory()
 
 kernel = Kernel(memory, planner, skill_engine, context_memory)
