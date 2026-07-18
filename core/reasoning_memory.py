@@ -3,31 +3,44 @@ from core.decision_memory import find_decision
 from core.lesson_memory import find_lesson
 
 
+def find_project_reason(text=None):
 
-def find_project_reason():
+    # ---------------------------------
+    # فقط برای سوال‌های پروژه‌ای فعال شود
+    # ---------------------------------
+    if text:
+        text_lower = text.lower()
+
+        project_words = [
+            "پروژه",
+            "ربات",
+            "پهپاد",
+            "ساخت",
+            "طراحی",
+            "مدار",
+            "برد",
+            "project"
+        ]
+
+        if not any(word in text_lower for word in project_words):
+            return None
 
     goal = get_goal()
 
-
     if not goal:
-
         return None
-
-
 
     topic = goal.get(
         "topic",
         ""
     )
 
-
-    # ---------- Lesson Memory ----------
-
+    # ---------------------------------
+    # Lesson Memory
+    # ---------------------------------
     lesson = find_lesson(topic)
 
-
     if lesson:
-
         return {
             "source": "lesson_memory",
             "answer":
@@ -40,23 +53,19 @@ def find_project_reason():
             )
         }
 
-
-
-    # ---------- Decision Memory ----------
-
+    # ---------------------------------
+    # Decision Memory
+    # ---------------------------------
     steps = goal.get(
         "steps",
         []
     )
 
-
     for stage in steps:
 
         decision = find_decision(stage)
 
-
         if decision:
-
             return {
                 "source": "decision_memory",
                 "answer":
@@ -70,7 +79,5 @@ def find_project_reason():
                     10
                 )
             }
-
-
 
     return None

@@ -2,11 +2,14 @@ from .decision import Decision
 from .decision_result import DecisionResult
 from .decision_scorer import DecisionScorer
 from .decision_types import DecisionType
+from .decision_features import detect_features
+from .decision_priority import PRIORITY_BONUS
 
 
 class DecisionEngine:
     """
     Cortex Decision Engine
+    موتور تصمیم‌گیری اصلی Sepehr2
     """
 
     def __init__(self):
@@ -22,10 +25,20 @@ class DecisionEngine:
             )
 
 
+        # -------------------------
+        # Feature Detection
+        # -------------------------
+
+        features = detect_features(text)
+
+
+        # -------------------------
+        # Score
+        # -------------------------
+
         scores = self.scorer.score(text)
 
 
-        # اگر چیزی تشخیص داده نشد
         if not scores:
             return DecisionResult(
                 success=True,
@@ -35,78 +48,109 @@ class DecisionEngine:
                     service="ChatService",
                     priority=1,
                     metadata={
-                        "original_text": text
+                        "features": features
                     }
                 ),
                 message="Default chat decision."
             )
 
 
-        # انتخاب بالاترین امتیاز
-        winner = max(
-            scores.items(),
-            key=lambda item: item[1]["score"]
+        # -------------------------
+        # Apply Priority Bonus
+        # -------------------------
+
+        ranked = {}
+
+        for decision_type, info in scores.items():
+
+            bonus = PRIORITY_BONUS.get(
+                decision_type,
+                0
+            )
+
+            ranked[decision_type] = (
+                info["score"] + bonus
+            )
+
+
+        # -------------------------
+        # Select Winner
+        # -------------------------
+
+        winner_type = max(
+            ranked,
+            key=ranked.get
         )
 
 
-        decision_type = winner[0]
-        info = winner[1]
+        info = scores[winner_type]
 
 
-        # محاسبه confidence
-        total_score = sum(
-            item["score"]
-            for item in scores.values()
+        total = sum(
+            ranked.values()
         )
 
 
         confidence = round(
-            info["score"] / total_score,
+            ranked[winner_type] / total,
             2
-        ) if total_score else 0.5
+        ) if total else 0.5
 
 
+
+        # -------------------------
+        # Create Decision
+        # -------------------------
 
         decision = Decision(
 
-            decision_type=decision_type.value,
+            decision_type=winner_type.value,
 
             confidence=confidence,
 
-            service=f"{decision_type.value.title()}Service",
+            service=f"{winner_type.value.title()}Service",
 
-
-            planner=decision_type in (
+            planner=winner_type in (
                 DecisionType.PROJECT,
                 DecisionType.PLAN,
             ),
 
-
-            requires_memory=decision_type in (
+            requires_memory=winner_type in (
                 DecisionType.MEMORY,
                 DecisionType.LEARNING,
             ),
 
-
-            requires_reasoning=decision_type in (
+            requires_reasoning=winner_type in (
                 DecisionType.REASONING,
                 DecisionType.QUESTION,
             ),
 
-
-            priority=info["score"],
-
+            priority=ranked[winner_type],
 
             metadata={
+
                 "scores": scores,
-                "matched_keywords": info["matched"],
-                "original_text": text,
+
+                "priority_scores": ranked,
+
+                "matched_keywords":
+                    info["matched"],
+
+                "features":
+                    features,
+
+                "original_text":
+                    text
             }
         )
 
 
         return DecisionResult(
+
             success=True,
+
             decision=decision,
+
             message="Decision created."
+
         )

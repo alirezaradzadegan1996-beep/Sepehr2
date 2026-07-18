@@ -1,8 +1,6 @@
 from core.intent import detect_intent
 from core.cortex.system_bus import bus
 from core.cortex.cortex import cortex
-from core.cortex.system_bus import bus
-from core.normalizer import normalize
 
 
 class Kernel:
@@ -21,6 +19,7 @@ class Kernel:
         self.planner = planner
         self.skill_engine = skill_engine
         self.context_memory = context_memory
+
         self.cortex = cortex
         self.router = None
 
@@ -30,11 +29,12 @@ class Kernel:
             pass
 
 
-
     def start(self):
-        print("[Kernel] Ready")
-        bus.publish("kernel.started")
 
+        print("[Kernel] Ready")
+        bus.publish(
+            "kernel.started"
+        )
 
 
     def process(self, user_input):
@@ -61,7 +61,10 @@ class Kernel:
         user_input = user_input.strip()
 
 
-        print("\n[Kernel] Received:", user_input)
+        print(
+            "\n[Kernel] Received:",
+            user_input
+        )
 
 
         bus.publish(
@@ -71,56 +74,32 @@ class Kernel:
 
 
         # -------------------------
-        # Cortex Decision
+        # Decision Engine
         # -------------------------
 
-        decision = self.cortex.decide(user_input)
+        decision = self.cortex.decide(
+            user_input
+        )
+
 
         print(
             "[DECISION]",
             decision.decision.decision_type,
-            decision.decision.confidence,
-        )
-
-        # -------------------------
-        # Search Service
-        # -------------------------
-
-        # -------------------------
-        # Dispatcher
-        # -------------------------
-
-        dispatcher = self.cortex.get("dispatcher")
-
-        result = dispatcher.dispatch(
-            decision.decision.service,
-            user_input,
-        )
-
-        if result is not None:
-
-            if isinstance(result, dict):
-                return result.get(
-                    "message",
-                    str(result),
-                )
-
-            return result
-
-        intent = detect_intent(user_input)
-
-        print("[INTENT]", intent)
-
-
-        bus.publish(
-            "intent.detected",
-            intent
+            decision.decision.confidence
         )
 
 
-        # خروج
+        decision_type = decision.decision.decision_type
 
-        if user_input.strip() in [
+
+        intent = decision_type
+
+
+        # -------------------------
+        # Exit
+        # -------------------------
+
+        if user_input in [
             "خروج",
             "exit",
             "quit"
@@ -129,32 +108,79 @@ class Kernel:
             return "خداحافظ ❤️"
 
 
+        # -------------------------
+        # Dispatcher
+        # -------------------------
 
-        # سیستم پروژه
+        try:
+
+            dispatcher = self.cortex.get(
+                "dispatcher"
+            )
+
+            result = dispatcher.dispatch(
+                decision.decision.service,
+                user_input
+            )
+
+
+            if result is not None:
+
+                if isinstance(result, dict):
+
+                    return result.get(
+                        "message",
+                        str(result)
+                    )
+
+                return result
+
+
+        except Exception as e:
+
+            print(
+                "[DISPATCH ERROR]",
+                e
+            )
+
+
+        # -------------------------
+        # Intent
+        # -------------------------
+
+        print(
+            "[INTENT]",
+            intent
+        )
+
+
+        bus.publish(
+            "intent.detected",
+            intent
+        )
+
+
+        # -------------------------
+        # Project System
+        # -------------------------
 
         if intent == "project":
 
 
-            # رفتن به مرحله بعد
-
-            if user_input.strip() == "بعدی":
-
+            if user_input == "بعدی":
 
                 result = self.memory.next_project_step()
 
-
-
-                # اگر پروژه تمام شده
-
                 if result is None:
 
+                    project = (
+                        self.memory
+                        .get_active_project()
+                    )
 
-                    project = self.memory.get_active_project()
-
-
-
-                    if project and project.get("status") == "completed":
-
+                    if project and project.get(
+                        "status"
+                    ) == "completed":
 
                         return (
                             "🚀 پروژه کامل شد.\n\n"
@@ -164,9 +190,7 @@ class Kernel:
                         )
 
 
-
                     return "❌ مرحله بعدی وجود ندارد."
-
 
 
                 if isinstance(result, dict):
@@ -177,13 +201,7 @@ class Kernel:
                     )
 
 
-                bus.publish("kernel.response", result)
                 return result
-
-
-
-
-            # ساخت پروژه جدید
 
 
             plan = self.planner.create_plan(
@@ -205,28 +223,38 @@ class Kernel:
                 )
 
 
-            bus.publish("kernel.response", result)
             return result
 
 
 
+        # -------------------------
+        # Router
+        # -------------------------
 
-        # ---------- Cortex Router ----------
         if self.router:
-            try:
-                cortex_answer = self.router.handle(user_input)
 
-                if cortex_answer:
-                    return cortex_answer
+            try:
+
+                answer = self.router.handle(
+                    user_input
+                )
+
+                if answer:
+
+                    return answer
+
 
             except Exception as e:
-                print("[CORTEX ROUTER ERROR]", e)
+
+                print(
+                    "[CORTEX ROUTER ERROR]",
+                    e
+                )
 
 
-
-
-        # درخواست‌های معمولی
-
+        # -------------------------
+        # Default Skill
+        # -------------------------
 
         plan = self.planner.create_plan(
             user_input,
@@ -239,7 +267,6 @@ class Kernel:
         )
 
 
-
         if isinstance(result, dict):
 
             return result.get(
@@ -248,6 +275,10 @@ class Kernel:
             )
 
 
+        bus.publish(
+            "kernel.response",
+            result
+        )
 
-        bus.publish("kernel.response", result)
+
         return result

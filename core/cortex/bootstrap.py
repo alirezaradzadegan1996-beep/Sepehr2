@@ -18,7 +18,7 @@ from core.cortex.search_service import SearchService
 from core.cortex.service_dispatcher import ServiceDispatcher
 
 
-def boot():
+def boot(planner=None, skill_engine=None):
 
     print("🧠 Booting Sepehr OS...\n")
 
@@ -61,6 +61,24 @@ def boot():
         PlannerService()
     )
 
+
+    # -------------------------
+    # Project Service
+    # -------------------------
+
+    if planner and skill_engine:
+
+        from core.cortex.project_service import ProjectService
+
+        cortex.register_safe(
+            "ProjectService",
+            ProjectService(
+                planner,
+                skill_engine
+            )
+        )
+
+
     cortex.register_safe(
         "health",
         HealthService(cortex)
@@ -76,6 +94,7 @@ def boot():
         SearchService()
     )
 
+
     # -------------------------
     # Skills
     # -------------------------
@@ -90,9 +109,14 @@ def boot():
     print("✅ router ready")
     print("✅ dispatcher ready")
     print("✅ planner ready")
+
+    if cortex.has("ProjectService"):
+        print("✅ project ready")
+
     print("✅ health ready")
     print("✅ events ready")
     print("✅ search ready")
+
 
     print("\n🚀 Sepehr OS Ready")
 

@@ -9,11 +9,20 @@ from core.planning_engine import create_plan
 from core.goal_engine import create_goal
 from core.goal_engine import next_step
 from core.goal_engine import has_goal
+from core.cortex.cortex import cortex
 
 
 def route(text):
 
     text = text.strip()
+
+    if text == "تست کورتکس":
+
+        router = cortex.get("router")
+
+        return router.handle(
+            "دمای سطح زهره چقدر است؟"
+        )
 
     # -----------------------------
     # ادامه پروژه

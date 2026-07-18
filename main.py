@@ -10,9 +10,6 @@ from core.cortex.cortex import cortex
 
 def create_system():
 
-    # Boot Sepehr OS
-    boot()
-
     memory = Memory()
 
     planner = Planner(memory)
@@ -21,6 +18,13 @@ def create_system():
         memory,
         cortex
     )
+
+    # Boot Cortex after dependencies are ready
+    boot(
+        planner,
+        skill_engine
+    )
+
 
     context_memory = ContextMemory()
 
@@ -33,24 +37,21 @@ def create_system():
     )
 
 
-    # Register Cortex services
+    # -------------------------
+    # Runtime Services
+    # -------------------------
 
-    cortex.register(
-        "memory",
-        memory
-    )
-
-    cortex.register(
+    cortex.register_safe(
         "planner",
         planner
     )
 
-    cortex.register(
+    cortex.register_safe(
         "context",
         context_memory
     )
 
-    cortex.register(
+    cortex.register_safe(
         "kernel",
         kernel
     )
@@ -76,7 +77,8 @@ def run():
 
         user_input = input("\nعلیرضا: ")
 
-        if user_input == "خروج":
+
+        if user_input.strip() == "خروج":
             print("سپهر: خداحافظ ❤️")
             break
 
@@ -88,5 +90,4 @@ def run():
 
 
 if __name__ == "__main__":
-
     run()

@@ -1,9 +1,9 @@
 {
-    "id": "3693522c",
-    "goal": "برام یک اپ ماشین حساب بساز",
+    "id": "059809fa",
+    "goal": "برای من یک اپ فروشگاه بساز",
     "status": "active",
-    "created_at": "2026-07-15T19:00:07",
-    "updated_at": "2026-07-15T19:00:07",
+    "created_at": "2026-07-18T18:01:14",
+    "updated_at": "2026-07-18T18:01:14",
     "step": 0,
     "steps": [
         "تحلیل درخواست",
@@ -15,226 +15,98 @@
         "تحویل پروژه"
     ],
     "analysis": {
-        "type": "calculator",
+        "type": "ecommerce",
         "features": [
-            "اضافه کردن عملیات بیشتر",
-            "مدیریت خطا",
-            "رابط کاربری",
-            "افزودن تاریخچه محاسبات",
-            "اعتبارسنجی ورودی‌ها",
-            "مدیریت تقسیم بر صفر",
-            "ساختار قابل توسعه برای عملیات جدید",
-            "تاریخچه محاسبات",
-            "ساختار قابل توسعه",
-            "validator"
+            "ذخیره کالاها در دیتابیس",
+            "سیستم جستجوی محصولات",
+            "مدیریت کاربران",
+            "ثبت سفارش"
         ],
         "files": [
             "main.py",
-            "calculator.py",
-            "test.py",
-            "history.py",
-            "validator.py",
-            "errors.py"
+            "product.py",
+            "cart.py",
+            "database.py",
+            "user.py",
+            "test.py"
         ],
         "reasoning": {
-            "goal": "برام یک اپ ماشین حساب بساز",
+            "goal": "برای من یک اپ فروشگاه بساز",
             "architecture": [
-                "Calculation Engine",
-                "Input Handler"
+                "Product Manager",
+                "Shopping Cart",
+                "Database Layer",
+                "User System"
             ],
             "modules": [
                 "main.py",
-                "calculator.py",
-                "test.py",
-                "history.py",
-                "validator.py",
-                "errors.py"
+                "product.py",
+                "cart.py",
+                "database.py",
+                "user.py",
+                "test.py"
             ],
             "suggestions": [
-                "اضافه کردن عملیات بیشتر",
-                "مدیریت خطا",
-                "رابط کاربری",
-                "افزودن تاریخچه محاسبات",
-                "اعتبارسنجی ورودی‌ها",
-                "مدیریت تقسیم بر صفر",
-                "ساختار قابل توسعه برای عملیات جدید",
-                "تاریخچه محاسبات",
-                "ساختار قابل توسعه",
-                "validator"
+                "ذخیره کالاها در دیتابیس",
+                "سیستم جستجوی محصولات",
+                "مدیریت کاربران",
+                "ثبت سفارش"
             ],
-            "type": "calculator",
+            "type": "ecommerce",
             "experience": {
-                "found": true,
-                "project_type": "calculator",
-                "projects_count": 10,
-                "confidence": "high",
-                "experience_successes": 5,
-                "experience_failures": 0,
-                "best_project_id": "21ff5f8e",
-                "best_project_name": "یک ماشین حساب حرفه‌ای با مدیریت خطا بساز",
-                "best_score": 170,
-                "architecture": [
-                    "Calculation Engine",
-                    "Input Handler"
-                ],
-                "files": [
-                    "main.py",
-                    "calculator.py",
-                    "test.py"
-                ],
-                "features": [
-                    "اضافه کردن عملیات بیشتر",
-                    "مدیریت خطا",
-                    "رابط کاربری"
-                ],
-                "suggestions": [
-                    "اضافه کردن عملیات بیشتر",
-                    "مدیریت خطا",
-                    "رابط کاربری"
-                ]
+                "found": false,
+                "project_type": "ecommerce",
+                "projects_count": 0,
+                "best_project_id": null,
+                "best_score": 0,
+                "architecture": [],
+                "files": [],
+                "features": [],
+                "suggestions": []
             },
-            "experience_used": true,
-            "reasoning_source": "base_reasoning+trusted_project_experience+experience_evolution",
-            "experience_confidence": "medium",
-            "evolution": {
-                "evolved": true,
-                "source_project_id": "21ff5f8e",
-                "goal": "برام یک اپ ماشین حساب بساز",
-                "architecture": [
-                    "Calculation Engine",
-                    "Input Handler"
-                ],
-                "modules": [
-                    "main.py",
-                    "calculator.py",
-                    "test.py"
-                ],
-                "suggestions": [
-                    "اضافه کردن عملیات بیشتر",
-                    "مدیریت خطا",
-                    "رابط کاربری",
-                    "افزودن تاریخچه محاسبات",
-                    "اعتبارسنجی ورودی‌ها",
-                    "مدیریت تقسیم بر صفر",
-                    "ساختار قابل توسعه برای عملیات جدید"
-                ],
-                "improvements": [
-                    "افزودن تاریخچه محاسبات",
-                    "اعتبارسنجی ورودی‌ها",
-                    "مدیریت تقسیم بر صفر",
-                    "ساختار قابل توسعه برای عملیات جدید"
-                ]
-            },
-            "experience_evolved": true,
-            "experience_memory": {
-                "found": true,
-                "type": "calculator",
-                "confidence": "medium",
-                "success_count": 2,
-                "features": [
-                    "مدیریت خطا",
-                    "تاریخچه محاسبات"
-                ],
-                "files": [
-                    "main.py",
-                    "calculator.py",
-                    "history.py",
-                    "validator.py"
-                ],
-                "suggestions": [
-                    "ساختار قابل توسعه"
-                ]
-            },
-            "learned_files": [
-                "main.py",
-                "calculator.py",
-                "history.py",
-                "validator.py"
-            ],
-            "learned_features": [
-                "مدیریت خطا",
-                "تاریخچه محاسبات"
-            ],
-            "experience_memory_used": true,
-            "experience_source": "ExperienceMemory",
+            "experience_used": false,
+            "reasoning_source": "base_reasoning",
+            "experience_memory_used": false,
             "learning": {
-                "project_type": "calculator",
-                "experience": {
-                    "found": true,
-                    "type": "calculator",
-                    "confidence": "medium",
-                    "success_count": 2,
-                    "features": [
-                        "مدیریت خطا",
-                        "تاریخچه محاسبات"
-                    ],
-                    "files": [
-                        "main.py",
-                        "calculator.py",
-                        "history.py",
-                        "validator.py"
-                    ],
-                    "suggestions": [
-                        "ساختار قابل توسعه"
-                    ]
-                },
+                "project_type": "ecommerce",
+                "experience": null,
                 "repairs": [],
-                "suggestions": [
-                    "تاریخچه محاسبات",
-                    "مدیریت خطا"
-                ]
+                "suggestions": []
             }
         },
         "knowledge": {
             "used": true,
-            "project_type": "calculator",
-            "patterns": [
-                "مدیریت خطا",
-                "validator"
-            ],
-            "previous_errors": [
-                "ImportError"
-            ]
+            "project_type": "ecommerce",
+            "patterns": [],
+            "previous_errors": []
         },
-        "learned_files": [
-            "main.py",
-            "calculator.py",
-            "history.py",
-            "validator.py"
-        ],
+        "learned_files": [],
         "optimization": {
-            "folders": [],
+            "folders": [
+                "data",
+                "tests"
+            ],
             "files": [
                 "main.py",
-                "calculator.py",
+                "product.py",
+                "cart.py",
+                "database.py",
+                "user.py",
                 "test.py",
-                "history.py",
-                "validator.py",
-                "errors.py",
-                "operations.py"
+                "requirements.txt"
             ],
             "dependencies": [],
-            "database": null,
+            "database": "sqlite",
             "testing": true,
             "quality": [
                 "README",
                 "UTF-8"
             ],
-            "experience_applied": true,
-            "experience_files": [
-                "main.py",
-                "calculator.py",
-                "history.py",
-                "validator.py"
-            ],
+            "experience_applied": false,
+            "experience_files": [],
             "knowledge_applied": true,
-            "evolution_applied": true,
-            "evolution_files": [
-                "history.py",
-                "validator.py",
-                "errors.py",
-                "operations.py"
-            ]
+            "evolution_applied": false,
+            "evolution_files": []
         }
     }
 }

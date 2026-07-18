@@ -83,6 +83,15 @@ def detect_intent(text):
 
 
 
+    search_words = [
+        "جستجو",
+        "جستجو کن",
+        "در وب",
+        "وب",
+        "گوگل",
+        "search",
+    ]
+
     # -------------------------
     # Math
     # -------------------------
@@ -154,6 +163,12 @@ def detect_intent(text):
     for word in project_words:
         if word in text:
             return "project"
+
+
+
+    for word in search_words:
+        if word in text:
+            return "search"
 
 
 

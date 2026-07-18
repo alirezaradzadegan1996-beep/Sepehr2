@@ -13,9 +13,13 @@ class Cortex:
     def __init__(self):
 
         self.registry = registry
+
         self.engine = CortexEngine(self.registry)
 
-        # Skill Management
+        from .action_chain import ActionChain
+
+        self.engine.action_chain = ActionChain(self)
+
         self.skill_manager = SkillManager()
 
 
@@ -68,6 +72,13 @@ class Cortex:
         )
 
 
+
+    # -------------------------
+    # Decision Engine
+    # -------------------------
+
+    def decide(self, text):
+        return self.engine.decide(text)
 
     def services(self):
 

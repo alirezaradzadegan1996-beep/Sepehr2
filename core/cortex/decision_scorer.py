@@ -3,10 +3,11 @@ from .decision_rules import RULES
 
 class DecisionScorer:
     """
-    مسئول محاسبه امتیاز هر نوع تصمیم
+    محاسبه امتیاز تصمیم‌ها با وزن کلمات
     """
 
     def score(self, text: str) -> dict:
+
         text = text.lower().strip()
 
         scores = {}
@@ -16,10 +17,10 @@ class DecisionScorer:
             score = 0
             matched = []
 
-            for keyword in keywords:
+            for keyword, weight in keywords.items():
 
                 if keyword.lower() in text:
-                    score += 1
+                    score += weight
                     matched.append(keyword)
 
             if score > 0:

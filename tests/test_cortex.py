@@ -1,18 +1,29 @@
+from core.cortex.bootstrap import boot
 from core.cortex.cortex import cortex
 
 
-def hello(name):
-    return f"سلام {name}"
+print("=== Cortex Test ===")
+
+boot()
+
+services = cortex.services()
+
+assert "memory" in services
+assert "knowledge" in services
+assert "reasoning" in services
+assert "router" in services
+assert "planner" in services
+assert "health" in services
 
 
-def main():
-    cortex.register("hello", hello)
+health = cortex.get("health")
 
-    result = cortex.execute("hello", "علیرضا")
+status = health.check()
 
-    print("Result:", result)
-    print("Status:", cortex.status())
+print(status)
+
+assert "memory" in status
+assert "router" in status
 
 
-if __name__ == "__main__":
-    main()
+print("PASS")
