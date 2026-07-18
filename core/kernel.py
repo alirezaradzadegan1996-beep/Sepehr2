@@ -1,5 +1,8 @@
 from core.intent import detect_intent
 from core.cortex.system_bus import bus
+from core.cortex.cortex import cortex
+from core.cortex.system_bus import bus
+from core.normalizer import normalize
 
 
 class Kernel:
@@ -18,6 +21,13 @@ class Kernel:
         self.planner = planner
         self.skill_engine = skill_engine
         self.context_memory = context_memory
+        self.cortex = cortex
+        self.router = None
+
+        try:
+            self.router = self.cortex.get("router")
+        except Exception:
+            pass
 
 
 
@@ -29,15 +39,72 @@ class Kernel:
 
     def process(self, user_input):
 
+        # -------------------------
+        # Clean Input
+        # -------------------------
+
+        user_input = user_input.replace(
+            "[Kernel] Received:",
+            ""
+        )
+
+        user_input = user_input.replace(
+            "kernel received",
+            ""
+        )
+
+        user_input = user_input.replace(
+            "علیرضا:",
+            ""
+        )
+
+        user_input = user_input.strip()
+
+
         print("\n[Kernel] Received:", user_input)
 
-        bus.publish("kernel.input", user_input)
+
+        bus.publish(
+            "kernel.input",
+            user_input
+        )
+
+
+        # -------------------------
+        # Cortex Decision
+        # -------------------------
+
+        decision = self.cortex.decide(user_input)
+
+        print(
+            "[DECISION]",
+            decision.decision.decision_type,
+            decision.decision.confidence,
+        )
+
+        # -------------------------
+        # Search Service
+        # -------------------------
+
+        if decision.decision.decision_type == "search":
+            search = self.cortex.get("search")
+
+            result = search.handle(user_input)
+
+            if isinstance(result, dict):
+                return result.get("message", str(result))
+
+            return result
 
         intent = detect_intent(user_input)
 
         print("[INTENT]", intent)
 
-        bus.publish("intent.detected", intent)
+
+        bus.publish(
+            "intent.detected",
+            intent
+        )
 
 
         # خروج
@@ -129,6 +196,20 @@ class Kernel:
 
             bus.publish("kernel.response", result)
             return result
+
+
+
+
+        # ---------- Cortex Router ----------
+        if self.router:
+            try:
+                cortex_answer = self.router.handle(user_input)
+
+                if cortex_answer:
+                    return cortex_answer
+
+            except Exception as e:
+                print("[CORTEX ROUTER ERROR]", e)
 
 
 
