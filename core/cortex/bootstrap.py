@@ -15,6 +15,7 @@ from core.cortex.planner_service import PlannerService
 from core.cortex.health_service import HealthService
 from core.cortex.event_service import EventService
 from core.cortex.search_service import SearchService
+from core.cortex.service_dispatcher import ServiceDispatcher
 
 
 def boot():
@@ -51,6 +52,11 @@ def boot():
     )
 
     cortex.register_safe(
+        "dispatcher",
+        ServiceDispatcher(cortex)
+    )
+
+    cortex.register_safe(
         "planner",
         PlannerService()
     )
@@ -82,6 +88,7 @@ def boot():
     print("✅ knowledge ready")
     print("✅ reasoning ready")
     print("✅ router ready")
+    print("✅ dispatcher ready")
     print("✅ planner ready")
     print("✅ health ready")
     print("✅ events ready")

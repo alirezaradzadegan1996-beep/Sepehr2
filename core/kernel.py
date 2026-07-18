@@ -86,13 +86,24 @@ class Kernel:
         # Search Service
         # -------------------------
 
-        if decision.decision.decision_type == "search":
-            search = self.cortex.get("search")
+        # -------------------------
+        # Dispatcher
+        # -------------------------
 
-            result = search.handle(user_input)
+        dispatcher = self.cortex.get("dispatcher")
+
+        result = dispatcher.dispatch(
+            decision.decision.service,
+            user_input,
+        )
+
+        if result is not None:
 
             if isinstance(result, dict):
-                return result.get("message", str(result))
+                return result.get(
+                    "message",
+                    str(result),
+                )
 
             return result
 
