@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from decision import Decision
+from .decision import Decision
 
 
 @dataclass

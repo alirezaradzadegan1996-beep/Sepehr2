@@ -1,4 +1,4 @@
-from decision_types import DecisionType
+from .decision_types import DecisionType
 
 
 RULES = {

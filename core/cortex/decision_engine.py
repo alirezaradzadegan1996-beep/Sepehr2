@@ -1,7 +1,7 @@
-from decision import Decision
-from decision_result import DecisionResult
-from decision_rules import RULES
-from decision_types import DecisionType
+from .decision import Decision
+from .decision_result import DecisionResult
+from .decision_rules import RULES
+from .decision_types import DecisionType
 
 
 class DecisionEngine:
