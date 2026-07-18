@@ -1,11 +1,16 @@
 from .decision import Decision
 from .decision_result import DecisionResult
-from .decision_rules import RULES
+from .decision_scorer import DecisionScorer
 from .decision_types import DecisionType
 
 
 class DecisionEngine:
-    """Cortex Decision Engine"""
+    """
+    Cortex Decision Engine
+    """
+
+    def __init__(self):
+        self.scorer = DecisionScorer()
 
     def decide(self, text: str) -> DecisionResult:
 
@@ -15,68 +20,67 @@ class DecisionEngine:
                 message="Empty input."
             )
 
-        original_text = text
-        text = text.lower().strip()
+        scores = self.scorer.score(text)
 
-        for decision_type, keywords in RULES.items():
+        if not scores:
 
-            for keyword in keywords:
+            return DecisionResult(
+                success=True,
+                decision=Decision(
+                    decision_type=DecisionType.CHAT.value,
+                    confidence=0.50,
+                    service="ChatService",
+                    priority=1,
+                    metadata={}
+                ),
+                message="Default chat decision."
+            )
 
-                if keyword.lower() in text:
+        winner = max(
+            scores.items(),
+            key=lambda item: item[1]["score"]
+        )
 
-                    decision = Decision(
-                        decision_type=decision_type.value,
-                        confidence=0.90,
-                        service=f"{decision_type.value.title()}Service",
+        decision_type = winner[0]
+        info = winner[1]
 
-                        planner=decision_type in (
-                            DecisionType.PROJECT,
-                            DecisionType.PLAN,
-                        ),
+        decision = Decision(
 
-                        requires_memory=decision_type in (
-                            DecisionType.MEMORY,
-                            DecisionType.LEARNING,
-                        ),
+            decision_type=decision_type.value,
 
-                        requires_reasoning=decision_type in (
-                            DecisionType.REASONING,
-                            DecisionType.QUESTION,
-                        ),
+            confidence=min(
+                1.0,
+                info["score"] / 3
+            ),
 
-                        priority=5,
-                        immediate=False,
+            service=f"{decision_type.value.title()}Service",
 
-                        metadata={
-                            "matched_keyword": keyword,
-                            "original_text": original_text,
-                        },
-                    )
+            planner=decision_type in (
+                DecisionType.PROJECT,
+                DecisionType.PLAN,
+            ),
 
-                    return DecisionResult(
-                        success=True,
-                        decision=decision,
-                        message="Decision created."
-                    )
+            requires_memory=decision_type in (
+                DecisionType.MEMORY,
+                DecisionType.LEARNING,
+            ),
+
+            requires_reasoning=decision_type in (
+                DecisionType.REASONING,
+                DecisionType.QUESTION,
+            ),
+
+            priority=info["score"],
+
+            metadata={
+                "scores": scores,
+                "matched_keywords": info["matched"],
+                "original_text": text,
+            },
+        )
 
         return DecisionResult(
             success=True,
-            decision=Decision(
-                decision_type=DecisionType.CHAT.value,
-                confidence=0.50,
-                service="ChatService",
-
-                planner=False,
-                requires_memory=False,
-                requires_reasoning=False,
-
-                priority=1,
-                immediate=False,
-
-                metadata={
-                    "matched_keyword": None,
-                    "original_text": original_text,
-                },
-            ),
-            message="Default chat decision."
+            decision=decision,
+            message="Decision created."
         )
