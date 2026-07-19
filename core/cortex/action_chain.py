@@ -1,70 +1,45 @@
-from .decision_types import DecisionType
+from .workflow_context import WorkflowContext
+from .workflow_runner import WorkflowRunner
+from .service_action import ServiceAction
 
 
 class ActionChain:
     """
-    مدیریت اجرای چند اکشن در Sepehr2 Cortex
+    اجرای Workflow سرویس‌های Cortex
     """
 
     def __init__(self, cortex):
         self.cortex = cortex
 
+    def run(self, service, method=None, *args, **kwargs):
 
-    def execute(self, decision, text):
+        text = ""
 
-        results = []
+        if args:
+            text = args[0]
 
-        features = decision.metadata.get(
-            "features",
-            []
+        class FakeDecision:
+            decision_type = "workflow"
+
+        context = WorkflowContext(
+            text=text,
+            decision=FakeDecision(),
         )
 
+        runner = WorkflowRunner()
 
-        # -------------------------
-        # Main Action
-        # -------------------------
-
-        main_result = self.cortex.get(
-            decision.service.replace(
-                "Service",
-                ""
-            ).lower()
-        )
-
-
-        if main_result:
-
-            if hasattr(main_result, "handle"):
-
-                result = main_result.handle(text)
-
-                results.append(result)
-
-
-
-        # -------------------------
-        # Memory Action
-        # -------------------------
-
-        if (
-            "memory" in features
-            and decision.decision_type != DecisionType.MEMORY.value
-        ):
-
-            memory = self.cortex.get(
-                "memory"
+        runner.add(
+            ServiceAction(
+                service,
+                method,
+                *args,
+                **kwargs,
             )
+        )
 
-            if memory:
+        result = runner.run(context)
 
-                memory.remember(
-                    "last_project_request",
-                    text
-                )
+        if result["results"]:
+            return result["results"][-1]
 
-                results.append(
-                    "🧠 درخواست در حافظه ذخیره شد."
-                )
-
-
-        return results
+        return None

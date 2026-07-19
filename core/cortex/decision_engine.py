@@ -4,7 +4,18 @@ from .decision_scorer import DecisionScorer
 from .decision_types import DecisionType
 from .decision_features import detect_features
 from .decision_priority import PRIORITY_BONUS
-
+SERVICE_MAP = {
+    DecisionType.CHAT: "router",
+    DecisionType.QUESTION: "router",
+    DecisionType.SEARCH: "search",
+    DecisionType.PROJECT: "ProjectService",
+    DecisionType.MEMORY: "memory",
+    DecisionType.LEARNING: "memory",
+    DecisionType.REASONING: "reasoning",
+    DecisionType.PLAN: "planner",
+    DecisionType.SYSTEM: "router",
+    DecisionType.UNKNOWN: "router",
+}
 
 class DecisionEngine:
     """
@@ -108,7 +119,10 @@ class DecisionEngine:
 
             confidence=confidence,
 
-            service=f"{winner_type.value.title()}Service",
+            service=SERVICE_MAP.get(
+                winner_type,
+                "router",
+            ),
 
             planner=winner_type in (
                 DecisionType.PROJECT,

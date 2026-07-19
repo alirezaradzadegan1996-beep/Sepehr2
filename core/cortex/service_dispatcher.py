@@ -23,6 +23,27 @@ class ServiceDispatcher(Service):
 
 
         # -------------------------
+        # Service Alias
+        # -------------------------
+
+        aliases = {
+            "ChatService": "router",
+            "MemoryService": "memory",
+            "KnowledgeService": "knowledge",
+            "ReasoningService": "reasoning",
+            "SearchService": "search",
+            "PlannerService": "planner",
+            "ContextService": "context",
+            "EventService": "events",
+            "HealthService": "health",
+        }
+
+        service_name = aliases.get(
+            service_name,
+            service_name,
+        )
+
+        # -------------------------
         # Direct service lookup
         # -------------------------
 
