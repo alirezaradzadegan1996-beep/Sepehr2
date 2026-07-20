@@ -87,13 +87,19 @@ def run(text):
         return finish_project()
 
 
-    # شروع پروژه
-    result = start_project(text)
+    # شروع پروژه با Auto Pipeline
+
+    result = _pm.auto_build(
+        text
+    )
 
     if isinstance(result, dict):
-        return result.get(
-            "message",
-            str(result)
+        return (
+            "🚀 پروژه خودکار انجام شد\n\n"
+            f"📌 پروژه:\n"
+            f"{result.get('project')}\n\n"
+            f"🧪 تست:\n"
+            f"{result.get('test')}"
         )
 
     return result

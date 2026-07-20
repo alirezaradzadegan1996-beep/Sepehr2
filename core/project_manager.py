@@ -17,6 +17,7 @@ from core.experience_memory import ExperienceMemory
 from core.project_learner import ProjectLearner
 from core.project_learning_engine import ProjectLearningEngine
 from core.knowledge_optimizer import KnowledgeOptimizer
+from core.auto_project_pipeline import AutoProjectPipeline
 
 
 FILE = "data/project.json"
@@ -39,7 +40,13 @@ class ProjectManager:
         self.learning_engine = ProjectLearningEngine()
         self.knowledge_optimizer = KnowledgeOptimizer()
 
+
         self.active = None
+
+        self.auto_pipeline = AutoProjectPipeline(
+            self
+        )
+
         self.load()
 
 
@@ -159,6 +166,16 @@ class ProjectManager:
             f"مرحله ۱:\n"
             f"{current_step(self.active)}"
         )
+
+
+    def auto_build(
+        self,
+        task
+    ):
+        return self.auto_pipeline.run(
+            task
+        )
+
 
     def generate_code(self):
 
