@@ -12,6 +12,7 @@ class Kernel:
         skill_engine,
         context_memory=None
     ):
+
         print("[Kernel] System Started")
 
         self.memory = memory
@@ -27,9 +28,14 @@ class Kernel:
         except Exception:
             pass
 
+
     def start(self):
+
         print("[Kernel] Ready")
-        bus.publish("kernel.started")
+        bus.publish(
+            "kernel.started"
+        )
+
 
     def process(self, user_input):
 
@@ -54,55 +60,58 @@ class Kernel:
 
         user_input = user_input.strip()
 
-        # -------------------------
-        # Active Project Workflow
-        # -------------------------
 
-        try:
-            from core.project_manager import _pm
+# -------------------------
+# Active Project Workflow
+# -------------------------
 
-            active = _pm.get_active()
+try:
+    from core.project_manager import _pm
 
-            workflow_commands = [
-                "بعدی",
-                "ادامه",
-                "ادامه پروژه",
-                "مرحله بعد",
-                "next",
-                "continue",
-            ]
+    active = _pm.get_active()
 
-            if active and user_input.lower() in workflow_commands:
-                print("[PROJECT] Continue Workflow")
+    workflow_commands = [
+        "بعدی",
+        "ادامه",
+        "ادامه پروژه",
+        "مرحله بعد",
+        "next",
+        "continue",
+    ]
 
-                result = _pm.continue_project()
+    if active and user_input.lower() in workflow_commands:
+        print("[PROJECT] Continue Workflow")
 
-                if isinstance(result, dict):
-                    return result.get(
-                        "message",
-                        str(result)
-                    )
+        result = _pm.continue_project()
 
-                return result
+        if isinstance(result, dict):
+            return result.get("message", str(result))
 
-        except Exception as e:
-            print("[PROJECT WORKFLOW]", e)
+        return result
 
-        print(
-            "\n[Kernel] Received:",
-            user_input
-        )
+except Exception as e:
+    print("[PROJECT WORKFLOW]", e)
+
+print(
+    "\n[Kernel] Received:",
+    user_input
+)
+
 
         bus.publish(
             "kernel.input",
             user_input
         )
 
+
         # -------------------------
         # Decision Engine
         # -------------------------
 
-        decision = self.cortex.decide(user_input)
+        decision = self.cortex.decide(
+            user_input
+        )
+
 
         print(
             "[DECISION]",
@@ -110,8 +119,12 @@ class Kernel:
             decision.decision.confidence
         )
 
+
         decision_type = decision.decision.decision_type
+
+
         intent = decision_type
+
 
         # -------------------------
         # Exit
@@ -120,34 +133,38 @@ class Kernel:
         if user_input in [
             "خروج",
             "exit",
-            "quit",
+            "quit"
         ]:
+
             return "خداحافظ ❤️"
+
 
         # -------------------------
         # Dispatcher
         # -------------------------
 
         try:
+
             print("\n===== SERVICES =====")
             print(self.cortex.services())
             print("====================")
 
-            dispatcher = self.cortex.get("dispatcher")
-
-            print(
-                "[SERVICE]",
-                decision.decision.service
+            dispatcher = self.cortex.get(
+                "dispatcher"
             )
+
+            print("[SERVICE]", decision.decision.service)
 
             result = dispatcher.dispatch(
                 decision.decision.service,
                 user_input
             )
 
+
             if result is not None:
 
                 if isinstance(result, dict):
+
                     return result.get(
                         "message",
                         str(result)
@@ -155,27 +172,37 @@ class Kernel:
 
                 return result
 
+
         except Exception as e:
+
             print(
                 "[DISPATCH ERROR]",
                 e
             )
 
+
         # -------------------------
         # Intent
         # -------------------------
 
-        print("[INTENT]", intent)
+        print(
+            "[INTENT]",
+            intent
+        )
+
 
         bus.publish(
             "intent.detected",
             intent
         )
+
+
         # -------------------------
         # Project System
         # -------------------------
 
         if intent == "project":
+
 
             if user_input == "بعدی":
 
@@ -183,12 +210,15 @@ class Kernel:
 
                 if result is None:
 
-                    project = self.memory.get_active_project()
+                    project = (
+                        self.memory
+                        .get_active_project()
+                    )
 
-                    if (
-                        project
-                        and project.get("status") == "completed"
-                    ):
+                    if project and project.get(
+                        "status"
+                    ) == "completed":
+
                         return (
                             "🚀 پروژه کامل شد.\n\n"
                             f"📌 نام پروژه:\n"
@@ -196,32 +226,43 @@ class Kernel:
                             "✅ تحویل پروژه انجام شد."
                         )
 
+
                     return "❌ مرحله بعدی وجود ندارد."
 
+
                 if isinstance(result, dict):
+
                     return result.get(
                         "message",
                         str(result)
                     )
 
+
                 return result
+
 
             plan = self.planner.create_plan(
                 user_input,
                 intent
             )
 
+
             result = self.skill_engine.execute(
                 plan
             )
 
+
             if isinstance(result, dict):
+
                 return result.get(
                     "message",
                     str(result)
                 )
 
+
             return result
+
+
 
         # -------------------------
         # Router
@@ -236,7 +277,9 @@ class Kernel:
                 )
 
                 if answer:
+
                     return answer
+
 
             except Exception as e:
 
@@ -244,6 +287,8 @@ class Kernel:
                     "[CORTEX ROUTER ERROR]",
                     e
                 )
+
+
         # -------------------------
         # Default Skill
         # -------------------------
@@ -253,19 +298,24 @@ class Kernel:
             intent
         )
 
+
         result = self.skill_engine.execute(
             plan
         )
 
+
         if isinstance(result, dict):
+
             return result.get(
                 "message",
                 str(result)
             )
 
+
         bus.publish(
             "kernel.response",
             result
         )
+
 
         return result

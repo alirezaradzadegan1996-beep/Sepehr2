@@ -139,21 +139,12 @@ class ProjectManager:
 
         os.makedirs(project_dir, exist_ok=True)
 
-        print("[ProjectBuilder] Building project...")
+        # فقط پوشه پروژه ساخته می‌شود.
+        # اجرای مراحل بر عهده AppBuilder است.
 
-        self.builder.build(
-            project_dir,
-            analysis["optimization"]
-        )
+        os.makedirs(project_dir, exist_ok=True)
 
-        print("[CodeEngine] Generating source code...")
-
-        code_result = self.code_engine.generate(
-            project_dir,
-            analysis
-        )
-
-        print(code_result)
+        self.active["step"] = 0
 
         self.save()
 
