@@ -68,6 +68,18 @@ class ProjectOptimizer:
                 "test.py"
             ]
 
+        elif project_type == "calendar_app":
+
+            plan["files"] = [
+                "main.py",
+                "calendar.py",
+                "reminder.py",
+                "database.py",
+                "test.py"
+            ]
+
+            plan["database"] = "sqlite"
+
 
         else:
 
