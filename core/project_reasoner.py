@@ -159,23 +159,36 @@ class ProjectReasoner:
             ]
 
 
-        else:
+        elif (
+            "روزشمار" in text
+            or "تقویم" in text
+            or "calendar" in text
+            or "یادآوری" in text
+            or "یادآور" in text
+        ):
 
-            result["type"] = "general"
+            result["type"] = "calendar_app"
 
             result["architecture"] = [
-                "Main Application"
+                "Calendar Engine",
+                "Reminder System",
+                "Storage Layer"
             ]
 
             result["modules"] = [
                 "main.py",
+                "calendar.py",
+                "reminder.py",
+                "database.py",
                 "test.py"
             ]
 
             result["suggestions"] = [
-                "بهبود ساختار کد",
-                "اضافه کردن تست"
+                "ثبت رویدادها",
+                "نمایش تاریخ",
+                "ذخیره یادآوری‌ها"
             ]
+
 
 
         # گرفتن تجربه قبلی
