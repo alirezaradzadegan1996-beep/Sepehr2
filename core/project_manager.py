@@ -90,59 +90,61 @@ class ProjectManager:
 
         analysis["reasoning"] = reasoning
 
-        # استفاده از تصمیم Reasoner قبل از Optimizer
+
+        # استفاده از تصمیم Reasoner
         analysis["type"] = reasoning.get(
             "type",
             analysis.get("type")
         )
+
 
         analysis["files"] = reasoning.get(
             "modules",
             analysis.get("files")
         )
 
+
         analysis["features"] = reasoning.get(
             "suggestions",
             analysis.get("features")
         )
 
-        # استفاده از دانش پروژه‌های قبلی
+
+        # بهینه سازی با دانش قبلی
         analysis = self.knowledge_optimizer.optimize(
             analysis
         )
 
+
         analysis["learned_files"] = analysis.get(
             "learned_files",
-            analysis.get(
-                "reasoning",
-                {}
-            ).get(
-                "experience_memory",
-                {}
-            ).get(
-                "files",
-                []
-            )
+            []
         )
 
-        # حالا Optimizer نوع صحیح را می‌بیند
-        optimization = self.optimizer.optimize(analysis)
+
+        # اجرای Optimizer
+        optimization = self.optimizer.optimize(
+            analysis
+        )
+
 
         analysis["optimization"] = optimization
 
+
         self.active["analysis"] = analysis
+
 
         project_dir = os.path.join(
             "projects",
             self.active["id"]
         )
 
-        os.makedirs(project_dir, exist_ok=True)
 
-        # فقط پوشه پروژه ساخته می‌شود.
-        # اجرای مراحل بر عهده AppBuilder است.
+        os.makedirs(
+            project_dir,
+            exist_ok=True
+        )
 
-        os.makedirs(project_dir, exist_ok=True)
 
         self.active["step"] = 0
 
@@ -157,7 +159,6 @@ class ProjectManager:
             f"مرحله ۱:\n"
             f"{current_step(self.active)}"
         )
-
 
     def generate_code(self):
 

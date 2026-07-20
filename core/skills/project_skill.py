@@ -56,7 +56,7 @@ def can_handle(text):
 
 def run(text):
 
-    # نمایش وضعیت
+    # نمایش وضعیت پروژه
     if "وضعیت" in text:
         return show_project()
 
@@ -65,35 +65,18 @@ def run(text):
     if (
         "بعدی" in text
         or "ادامه" in text
+        or "مرحله بعد" in text
     ):
 
-        project = _pm.get_active()
+        result = _pm.continue_project()
 
-        if not project:
-            return "❌ پروژه فعالی وجود ندارد."
+        if isinstance(result, dict):
+            return result.get(
+                "message",
+                str(result)
+            )
 
-
-        step_name = _pm.next_step()
-
-
-        if step_name is None:
-            return "✅ پروژه کامل شد."
-
-
-        project = _pm.get_active()
-
-
-        result = AppBuilder.run(
-            project,
-            project["step"]
-        )
-
-
-        return (
-            f"📌 پروژه: {project['goal']}\n\n"
-            f"مرحله {project['step'] + 1}:\n"
-            f"{result['message']}"
-        )
+        return result
 
 
     # پایان پروژه
@@ -104,6 +87,13 @@ def run(text):
         return finish_project()
 
 
-
     # شروع پروژه
-    return start_project(text)
+    result = start_project(text)
+
+    if isinstance(result, dict):
+        return result.get(
+            "message",
+            str(result)
+        )
+
+    return result
