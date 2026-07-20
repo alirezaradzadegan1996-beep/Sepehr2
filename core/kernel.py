@@ -1,6 +1,7 @@
 from core.intent import detect_intent
 from core.cortex.system_bus import bus
 from core.cortex.cortex import cortex
+from core.response_engine import ResponseEngine
 
 
 class Kernel:
@@ -20,6 +21,7 @@ class Kernel:
         self.context_memory = context_memory
 
         self.cortex = cortex
+        self.response_engine = ResponseEngine()
         self.router = None
 
         try:
@@ -73,20 +75,21 @@ class Kernel:
             ]
 
             if active and user_input.lower() in workflow_commands:
-                print("[PROJECT] Continue Workflow")
+                print(
+                    "[PROJECT] Continue Workflow"
+                )
 
                 result = _pm.continue_project()
 
-                if isinstance(result, dict):
-                    return result.get(
-                        "message",
-                        str(result)
-                    )
-
-                return result
+                return self.response_engine.format(
+                    result
+                )
 
         except Exception as e:
-            print("[PROJECT WORKFLOW]", e)
+            print(
+                "[PROJECT WORKFLOW]",
+                e
+            )
 
         print(
             "\n[Kernel] Received:",
@@ -147,13 +150,9 @@ class Kernel:
 
             if result is not None:
 
-                if isinstance(result, dict):
-                    return result.get(
-                        "message",
-                        str(result)
-                    )
-
-                return result
+                return self.response_engine.format(
+                    result
+            )
 
         except Exception as e:
             print(

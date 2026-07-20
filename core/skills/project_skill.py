@@ -93,13 +93,12 @@ def run(text):
         text
     )
 
-    if isinstance(result, dict):
-        return (
-            "🚀 پروژه خودکار انجام شد\n\n"
-            f"📌 پروژه:\n"
-            f"{result.get('project')}\n\n"
-            f"🧪 تست:\n"
-            f"{result.get('test')}"
-        )
 
-    return result
+    from core.response_engine import ResponseEngine
+
+    response = ResponseEngine()
+
+
+    return response.format(
+        result
+    )
