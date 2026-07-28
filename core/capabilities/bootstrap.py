@@ -1,20 +1,13 @@
-from core.capabilities import registry
-from core.services import registry as service_registry
+from core.capabilities.loader import discover
 
 
 def load_capabilities():
 
-    if service_registry.has("memory"):
-        registry.register(
-            "memory",
-            service_registry.get("memory")
-        )
+    loaded = discover()
 
-    if service_registry.has("android"):
-        registry.register(
-            "android",
-            service_registry.get("android")
-        )
+    print("[Capability] Loaded:", loaded)
+
+    return loaded
 
 
 load_capabilities()
