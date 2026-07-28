@@ -5,7 +5,10 @@ class MemoryCapability:
 
     name = "memory"
 
-    def can_handle(self, text):
+
+    def score(self, text):
+
+        score = 0
 
         keywords = [
             "یاد بگیر",
@@ -14,7 +17,18 @@ class MemoryCapability:
             "به یاد داشته باش"
         ]
 
-        return any(k in text for k in keywords)
+        for k in keywords:
+
+            if k in text:
+                score += 10
+
+
+        return score
+
+
+    def can_handle(self, text):
+
+        return self.score(text) > 0
 
 
     def handle(self, text):
