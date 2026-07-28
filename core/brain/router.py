@@ -1,12 +1,13 @@
-from core.services import registry
+from core.capabilities import registry
+
 
 class Router:
 
     def route(self, text):
 
-        for service in registry.list():
+        for capability in registry.list():
 
-            obj = registry.get(service)
+            obj = registry.get(capability)
 
             if hasattr(obj, "can_handle"):
 
@@ -14,6 +15,7 @@ class Router:
 
                     return obj.handle(text)
 
-        return "فعلاً سرویسی برای این درخواست وجود ندارد."
+        return "فعلاً قابلیتی برای این درخواست وجود ندارد."
+
 
 router = Router()

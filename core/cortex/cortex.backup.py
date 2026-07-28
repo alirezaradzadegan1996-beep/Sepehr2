@@ -9,8 +9,6 @@ class Cortex:
     def boot(self):
         print("[CORTEX] Booting...")
 
-        import core.capabilities.bootstrap
-
         for service in kernel.services.values():
             if hasattr(service, "initialize"):
                 service.initialize()
