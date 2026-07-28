@@ -9,9 +9,7 @@ class ActionService:
     def initialize(self):
 
         if not manager.get("system_task"):
-
             create_system_chain(manager)
-
 
         project_agent.initialize()
 
@@ -28,8 +26,12 @@ class ActionService:
         keywords = [
             "بساز",
             "ساخت",
-            "ایجاد کن",
-            "تولید کن"
+            "ایجاد",
+            "تولید",
+            "طراحی",
+            "پیاده سازی",
+            "درست کن",
+            "انجام بده"
         ]
 
         return any(k in text for k in keywords)
@@ -38,39 +40,10 @@ class ActionService:
 
     def handle(self, text):
 
-
-        project_keywords = [
-            "اپ",
-            "برنامه",
-            "پروژه",
-            "ماشین حساب",
-            "فروشگاه",
-            "سایت"
-        ]
-
-
-        if any(k in text for k in project_keywords):
-
-            return {
-                "agent": "project_agent",
-                "result": project_agent.run(text)
-            }
-
-
-
-        chain = manager.get("system_task")
-
-
-        if chain:
-
-            return {
-                "agent": "system",
-                "result": chain.run(text)
-            }
-
-
+        # تمام درخواست‌های ساخت به ProjectAgent می‌روند
         return {
-            "error": "no action chain"
+            "agent": "project_agent",
+            "result": project_agent.run(text)
         }
 
 

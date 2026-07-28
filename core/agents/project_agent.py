@@ -15,17 +15,22 @@ class ProjectAgent:
             create_project_chain(manager)
 
 
+
     def run(self, task):
 
-        chain = manager.get("project_build")
+        chain = manager.get(
+            "project_build"
+        )
 
         if chain:
 
             return chain.run(task)
 
+
         return {
-            "error": "project chain not found"
+            "error": "project build chain not found"
         }
+
 
 
 project_agent = ProjectAgent()
