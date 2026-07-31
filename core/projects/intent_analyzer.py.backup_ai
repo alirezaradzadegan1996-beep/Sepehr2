@@ -1,0 +1,83 @@
+class ProjectIntentAnalyzer:
+
+
+    name = "project_intent_analyzer"
+
+
+    def analyze(self, request):
+
+        text = request.lower()
+
+
+        project_type = "general"
+
+        features = []
+
+
+        if any(x in text for x in [
+            "ماشین حساب",
+            "calculator",
+            "محاسبه"
+        ]):
+
+            project_type = "calculator"
+
+            features = [
+                "operations",
+                "interface",
+                "testing"
+            ]
+
+
+        elif any(x in text for x in [
+            "فروشگاه",
+            "مارکت",
+            "فروش"
+        ]):
+
+            project_type = "ecommerce"
+
+            features = [
+                "products",
+                "users",
+                "cart",
+                "database"
+            ]
+
+
+        elif any(x in text for x in [
+            "وب",
+            "سایت",
+            "api"
+        ]):
+
+            project_type = "web"
+
+            features = [
+                "backend",
+                "api",
+                "database"
+            ]
+
+
+        else:
+
+            features = [
+                "basic_structure"
+            ]
+
+
+        return {
+
+            "request": request,
+
+            "project_type": project_type,
+
+            "features": features,
+
+            "status": "understood"
+
+        }
+
+
+intent_analyzer = ProjectIntentAnalyzer()

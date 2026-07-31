@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: car_parts
+"""
+
+
+def main():
+
+    print("Sepehr generated car_parts")
+
+
+if __name__ == "__main__":
+
+    main()
+

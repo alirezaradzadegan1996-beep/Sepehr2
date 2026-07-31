@@ -5,13 +5,8 @@ from core.projects.engine.debug_engine import debug_engine
 import os
 import json
 from core.templates.template_engine import template_engine
-from core.templates.smart_selector import smart_selector
-from core.templates.template_selector import template_selector
-from core.templates.adaptive_template_manager import adaptive_template_manager
 from core.projects.engine.code_engine import code_engine
-from core.projects.generator.file_generator import file_generator
 from core.projects.engine.code_engine import code_engine
-from core.projects.generator.file_generator import file_generator
 from core.projects.engine.test_engine import test_engine
 
 
@@ -87,20 +82,7 @@ class FullBuilderEngine:
 
     def generate_code(self, name, request):
 
-
-        intent = intent_analyzer.analyze(request)
-
-
-        template = adaptive_template_manager.get_template(
-            intent["project_type"],
-            intent["features"]
-        )
-
-
-        templates = template_engine.load(
-            template
-        )
-
+        templates = template_engine.select(request)
 
         return code_engine.generate(
             name,

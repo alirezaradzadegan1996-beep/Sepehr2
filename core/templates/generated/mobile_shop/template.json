@@ -1,0 +1,9 @@
+{
+    "project_type": "mobile_shop",
+    "features": [
+        "database",
+        "users",
+        "interface"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

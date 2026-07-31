@@ -1,0 +1,73 @@
+{
+    "project": "برام_یک_اپ_تعمیرات_دوچرخه_بساز",
+    "pipeline": [
+        {
+            "request": "برام یک اپ تعمیرات دوچرخه بساز",
+            "project_type": "general",
+            "features": [
+                "basic_structure"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "برام یک اپ تعمیرات دوچرخه بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_تعمیرات_دوچرخه_بساز/main.py"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_تعمیرات_دوچرخه_بساز/database.py"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_تعمیرات_دوچرخه_بساز/test.py"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": "Sepehr generated general\n"
+        },
+        {
+            "project": "برام_یک_اپ_تعمیرات_دوچرخه_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "برام_یک_اپ_تعمیرات_دوچرخه_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

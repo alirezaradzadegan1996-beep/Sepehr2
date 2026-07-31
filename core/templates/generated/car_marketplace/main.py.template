@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: car_marketplace
+"""
+
+
+def main():
+
+    print("Sepehr generated car_marketplace")
+
+
+if __name__ == "__main__":
+
+    main()
+

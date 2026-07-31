@@ -1,0 +1,9 @@
+{
+    "project_type": "car_parts",
+    "features": [
+        "products",
+        "inventory",
+        "database"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

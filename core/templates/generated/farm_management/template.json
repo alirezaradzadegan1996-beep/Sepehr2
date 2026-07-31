@@ -1,0 +1,9 @@
+{
+    "project_type": "farm_management",
+    "features": [
+        "database",
+        "users",
+        "interface"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

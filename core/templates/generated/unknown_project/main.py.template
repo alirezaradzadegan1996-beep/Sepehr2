@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: unknown_project
+"""
+
+
+def main():
+
+    print("Sepehr generated unknown_project")
+
+
+if __name__ == "__main__":
+
+    main()
+

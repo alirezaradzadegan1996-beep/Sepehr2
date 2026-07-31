@@ -1,0 +1,9 @@
+{
+    "project_type": "restaurant",
+    "features": [
+        "database",
+        "users",
+        "interface"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}
