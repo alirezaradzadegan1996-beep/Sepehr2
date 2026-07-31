@@ -1,18 +1,38 @@
-from core.templates.template_engine import template_engine
+
+import os
+import json
+
+from core.templates.template_creator import template_creator
 
 
 class AdaptiveTemplateManager:
 
 
-    name = "adaptive_template_manager"
+    def __init__(self):
+
+        self.memory="data/template_memory.json"
 
 
-    def get_template(self, project_type, features):
+    def get_template(self,name,features):
 
-        return template_engine.get_or_create(
-            project_type,
+        path=f"core/templates/generated/{name}"
+
+        if os.path.exists(path):
+
+            return {
+                "template":name,
+                "status":"exists"
+            }
+
+
+        result=template_creator.create(
+            name,
             features
         )
 
 
-adaptive_template_manager = AdaptiveTemplateManager()
+        return result
+
+
+
+adaptive_template_manager=AdaptiveTemplateManager()

@@ -1,81 +1,45 @@
+
 import os
 
 
 class TemplateEngine:
 
 
-    name="template_engine"
-
-
-    def __init__(self):
-
-        self.base="core/templates/generated"
-
-
-    def find(self,name):
-
-        path=os.path.join(
-            self.base,
-            name
-        )
-
-        if os.path.exists(path):
-            return path
-
-        return None
-
-
-
-    def load(self,name):
-
-        path=self.find(name)
-
-        if not path:
-            return {}
-
+    def load(self,result):
 
         files={}
 
+        if isinstance(result,dict):
 
-        for file in os.listdir(path):
+            path=result.get("path")
 
-            if file.endswith(".template"):
+            if not path:
 
-                with open(
-                    os.path.join(path,file),
-                    encoding="utf-8"
-                ) as f:
+                path=f"core/templates/generated/{result.get('template')}"
 
-                    new_name=file.replace(
-                        ".template",
-                        ""
-                    )
 
-                    files[new_name]=f.read()
+        else:
+
+            path=f"core/templates/generated/{result}"
+
+
+        if not os.path.exists(path):
+            return files
+
+
+        for f in os.listdir(path):
+
+            with open(
+                os.path.join(path,f),
+                encoding="utf-8"
+            ) as x:
+
+                files[
+                    f.replace(".template","")
+                ]=x.read()
 
 
         return files
-
-
-
-    def get_or_create(self,name,features):
-
-        path=self.find(name)
-
-        if path:
-            return self.load(name)
-
-
-        from core.templates.template_creator import template_creator
-
-
-        result=template_creator.create(
-            name,
-            features
-        )
-
-
-        return self.load(name)
 
 
 

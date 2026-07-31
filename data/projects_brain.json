@@ -1,0 +1,14 @@
+{
+    "examples": {
+        "hospital": [
+            "patients",
+            "doctors",
+            "appointments"
+        ],
+        "image_editor": [
+            "upload",
+            "filters",
+            "resize"
+        ]
+    }
+}
