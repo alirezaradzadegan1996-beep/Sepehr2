@@ -1,30 +1,75 @@
 from core.kernel import kernel
+from core.brain.brain import brain
+from core.conversation.conversation_intelligence import ConversationIntelligence
+from core.runtime.runtime_router_bridge import RuntimeRouterBridge
+
+
+router_bridge = RuntimeRouterBridge()
+conversation = ConversationIntelligence()
+
 
 class Cortex:
 
+
     def __init__(self):
-        self.version = "3.0"
+
+        self.version = "3.1"
         self.name = "Sepehr2"
 
+
+
     def boot(self):
+
         print("[CORTEX] Booting...")
 
-        import core.capabilities.bootstrap
 
         for service in kernel.services.values():
-            if hasattr(service, "initialize"):
+
+            if hasattr(service,"initialize"):
+
                 service.initialize()
+
 
         print("[CORTEX] Ready")
 
-    def think(self, text):
+
+
+    def think(self,text):
+
         print(f"[THINK] {text}")
+
 
         router = kernel.get("router")
 
-        if router:
-            return router.route(text)
 
-        return "هیچ Router فعالی ثبت نشده است."
+        if router:
+
+            result = router.route(text)
+
+            return brain.process(
+                text,
+                result
+            )
+
+
+        result = router_bridge.execute(text)
+
+        if result.get("route") == "conversation":
+
+            context = conversation.understand(text)
+
+            response = conversation.generate_response(context)
+
+            conversation.remember(text, response)
+
+            return {
+                "response": response,
+                "route": "conversation",
+                "status": "generated"
+            }
+
+        return result
+
+
 
 cortex = Cortex()

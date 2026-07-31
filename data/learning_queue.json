@@ -1,0 +1,37 @@
+[
+  {
+    "skill": "vision",
+    "priority": 6,
+    "status": "completed"
+  },
+  {
+    "skill": "camera",
+    "priority": 7,
+    "status": "completed"
+  },
+  {
+    "skill": "voice_input",
+    "priority": 8,
+    "status": "completed"
+  },
+  {
+    "skill": "voice_output",
+    "priority": 8,
+    "status": "completed"
+  },
+  {
+    "skill": "learning",
+    "priority": 8,
+    "status": "waiting"
+  },
+  {
+    "skill": "web",
+    "priority": 8,
+    "status": "completed"
+  },
+  {
+    "skill": "tools",
+    "priority": 8,
+    "status": "completed"
+  }
+]

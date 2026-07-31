@@ -1,9 +1,12 @@
+
 import os
 import json
 
 
-class ProjectManager:
+from core.builder.full_builder_engine import builder
 
+
+class ProjectManager:
 
     name = "project_manager"
 
@@ -33,10 +36,7 @@ class ProjectManager:
             exist_ok=True
         )
 
-        with open(
-            path,
-            "w"
-        ) as f:
+        with open(path, "w", encoding="utf-8") as f:
 
             json.dump(
                 data,
@@ -45,11 +45,31 @@ class ProjectManager:
                 ensure_ascii=False
             )
 
+        return {
+            "status":"saved",
+            "file":path
+        }
+
+
+    def build_project(self, request):
+
+        result = builder.build(request)
+
+        project = result.get(
+            "project",
+            "unknown"
+        )
+
+        self.save(
+            project,
+            result
+        )
 
         return {
-            "status": "saved",
-            "file": path
+            "status":"project_build_completed",
+            "result":result
         }
+
 
 
 project_manager = ProjectManager()

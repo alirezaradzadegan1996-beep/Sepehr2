@@ -1,22 +1,66 @@
-from core.kernel.bootstrap import *
+from core.runtime.runtime_router_bridge import RuntimeRouterBridge, autonomous_pipeline
 from core.cortex.cortex import cortex
+
+
+router_bridge = RuntimeRouterBridge()
+
 
 def main():
 
-    cortex.boot()
+    print("[SEPEHR] Runtime Started")
 
     while True:
 
-        text = input("\n👤 ")
+        text = input("👤 ")
 
-        if text in [
-            "exit",
-            "quit",
-            "خروج"
-        ]:
+        if text in ["exit", "quit", "خروج"]:
+            print("Sepehr stopped")
             break
 
-        print(cortex.think(text))
+
+        route_result = router_bridge.execute(text)
+        pipeline_result = autonomous_pipeline(text)
+        print('[PIPELINE]', pipeline_result)
+
+        print("[ROUTER]", route_result)
+
+
+        if route_result.get("route") == "conversation":
+
+            try:
+                print(cortex.think(text))
+            except Exception as e:
+                print({
+                    "response":"conversation_error",
+                    "error":str(e)
+                })
+
+
+        elif route_result.get("route") == "memory":
+
+            print({
+                "memory_action":"save_experience",
+                "input":text,
+                "status":"sent_to_memory"
+            })
+
+
+        elif route_result.get("route") == "project_builder":
+
+            print({
+                "builder_action":"build_project",
+                "project_request":text,
+                "status":"sent_to_builder"
+            })
+
+
+        else:
+
+            print({
+                "status":"unknown_route"
+            })
+
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,53 @@
+from core.kernel import kernel
+from core.brain.brain import brain
+
+
+class Cortex:
+
+
+    def __init__(self):
+
+        self.version = "3.1"
+        self.name = "Sepehr2"
+
+
+
+    def boot(self):
+
+        print("[CORTEX] Booting...")
+
+
+        for service in kernel.services.values():
+
+            if hasattr(service,"initialize"):
+
+                service.initialize()
+
+
+        print("[CORTEX] Ready")
+
+
+
+    def think(self,text):
+
+        print(f"[THINK] {text}")
+
+
+        router = kernel.get("router")
+
+
+        if router:
+
+            result = router.route(text)
+
+            return brain.process(
+                text,
+                result
+            )
+
+
+        return "Router فعال نیست"
+
+
+
+cortex = Cortex()

@@ -1,0 +1,54 @@
+{
+    "project": "یک_اپ_فروش_خودرو_بساز",
+    "pipeline": [
+        {
+            "request": "یک اپ فروش خودرو بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "project": "یک_اپ_فروش_خودرو_بساز",
+            "code_engine": "active",
+            "status": "generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "project": "یک_اپ_فروش_خودرو_بساز",
+            "tests": "executed",
+            "status": "passed"
+        },
+        {
+            "project": "یک_اپ_فروش_خودرو_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "یک_اپ_فروش_خودرو_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

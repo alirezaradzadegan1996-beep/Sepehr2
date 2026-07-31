@@ -1,0 +1,32 @@
+{
+  "abilities": {
+    "vision": "active",
+    "android": "active",
+    "memory": "active",
+    "system": "active",
+    "action": "active",
+    "battery_analysis": "active",
+    "weather": "active",
+    "camera": "active",
+    "voice_output": "active",
+    "web": "active",
+    "tools": "active",
+    "voice_input": "active"
+  },
+  "learning": {
+    "vision": "completed",
+    "camera": "completed",
+    "voice_output": "completed",
+    "web": "completed",
+    "tools": "completed",
+    "voice_input": "completed"
+  },
+  "completed": [
+    "vision",
+    "camera",
+    "voice_output",
+    "web",
+    "tools",
+    "voice_input"
+  ]
+}

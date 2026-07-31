@@ -1,0 +1,13 @@
+[
+  {
+    "time": "2026-07-28 07:26:10.152103",
+    "observation": {
+      "status": "processed",
+      "frame": 1,
+      "objects": [
+        "unknown_object"
+      ],
+      "description": "image analyzed"
+    }
+  }
+]

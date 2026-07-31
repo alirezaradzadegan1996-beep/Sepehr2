@@ -1,0 +1,28 @@
+from core.kernel.bootstrap import *
+from core.cortex.cortex import cortex
+from core.runtime.runtime_router_bridge import RuntimeRouterBridge
+
+
+router_bridge = RuntimeRouterBridge()
+
+
+def main():
+
+
+    cortex.boot()
+
+    while True:
+
+        text = input("\n👤 ")
+
+        if text in [
+            "exit",
+            "quit",
+            "خروج"
+        ]:
+            break
+
+        print(cortex.think(text))
+
+if __name__ == "__main__":
+    main()

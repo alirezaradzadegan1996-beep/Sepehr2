@@ -1,0 +1,127 @@
+[
+  {
+    "event": "first experience",
+    "text": "Sepehr2 growth started"
+  },
+  {
+    "input": "باتری",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "باتری",
+      "success": true,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد."
+    }
+  },
+  {
+    "time": "2026-07-28 06:57:51.001506",
+    "goal": "ساخت انسان دیجیتال",
+    "skill": "tools",
+    "result": "success",
+    "lesson": "برای ارتباط با دنیا به ابزار نیاز است"
+  },
+  {
+    "input": "سلام",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "سلام",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "سلام",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "خوبی؟",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "خوبی؟",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "خوبی؟",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "من علیرضا هستم",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "من علیرضا هستم",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "من علیرضا هستم",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "باتری",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "باتری",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "باتری",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "یک اپ ماظین حساب برام بساز",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "یک اپ ماظین حساب برام بساز",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "یک اپ ماظین حساب برام بساز",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "سلام",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "سلام",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "سلام",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  },
+  {
+    "input": "خوبی؟",
+    "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+    "evaluation": {
+      "task": "خوبی؟",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "خوبی؟",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    }
+  }
+]

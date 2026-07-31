@@ -1,0 +1,39 @@
+[
+  {
+    "time": "2026-07-28 07:08:29.328738",
+    "action": "failure_analysis",
+    "result": "battery issue detected"
+  },
+  {
+    "time": "2026-07-28 07:09:36.802647",
+    "action": "upgrade_failure_system",
+    "result": {
+      "action": "failure_analysis",
+      "status": "completed",
+      "found_failures": 1,
+      "data": [
+        {
+          "skill": "باتری",
+          "type": "failure_pattern",
+          "insight": "missing capability detected"
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-07-28 07:09:36.803257",
+    "action": "upgrade_pattern_system",
+    "result": {
+      "action": "pattern_extraction",
+      "status": "completed",
+      "found_patterns": 1,
+      "data": [
+        {
+          "skill": "tools",
+          "type": "success_pattern",
+          "insight": "برای ارتباط با دنیا به ابزار نیاز است"
+        }
+      ]
+    }
+  }
+]

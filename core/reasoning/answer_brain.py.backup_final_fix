@@ -1,0 +1,161 @@
+from datetime import datetime
+
+
+class AnswerBrain:
+
+
+    def __init__(self):
+
+        self.memory = {}
+        self.knowledge = {
+            "AI":"Artificial Intelligence studies intelligent systems"
+        }
+
+
+
+    def check_memory(self, question):
+
+        return self.memory.get(
+            question,
+            None
+        )
+
+
+
+    def check_knowledge(self, question):
+
+        return self.knowledge.get(
+            question,
+            None
+        )
+
+
+
+    def reason(self, question):
+
+        memory_result = self.check_memory(
+            question
+        )
+
+        if memory_result:
+
+            return {
+                "source":"memory",
+                "answer":memory_result,
+                "status":"answered"
+            }
+
+
+
+        knowledge_result = self.check_knowledge(
+            question
+        )
+
+        if knowledge_result:
+
+            return {
+                "source":"knowledge",
+                "answer":knowledge_result,
+                "status":"answered"
+            }
+
+
+
+        return {
+            "source":"reasoning",
+            "answer":"I need to learn this information",
+            "status":"learning_needed"
+        }
+
+
+
+    def save_experience(self, question, answer):
+
+        self.memory[question] = answer
+
+        return {
+            "saved":True,
+            "memory_size":len(self.memory)
+        }
+
+
+
+brain = AnswerBrain()
+
+
+print(
+    brain.reason(
+        "AI"
+    )
+)
+
+
+print(
+    brain.reason(
+        "unknown topic"
+    )
+)
+
+
+print(
+    brain.save_experience(
+        "unknown topic",
+        "learned information"
+    )
+)
+
+
+print(
+    brain.reason(
+        "unknown topic"
+    )
+)
+
+
+print(
+    {
+        "status":"answer_brain_active",
+        "time":str(datetime.now())
+    }
+)
+
+    def final_answer(self, question):
+
+        memory_result = None
+
+        try:
+            memory_result = self.search_memory(question)
+        except Exception:
+            pass
+
+
+        if memory_result:
+            return {
+                "source":"memory",
+                "answer":memory_result,
+                "status":"answered"
+            }
+
+
+        knowledge_result = None
+
+        try:
+            knowledge_result = self.search_knowledge(question)
+        except Exception:
+            pass
+
+
+        if knowledge_result:
+            return {
+                "source":"knowledge",
+                "answer":knowledge_result,
+                "status":"answered"
+            }
+
+
+        return {
+            "source":"reasoning",
+            "answer":"نیاز به تحلیل و یادگیری دارد",
+            "status":"learning_needed"
+        }
+

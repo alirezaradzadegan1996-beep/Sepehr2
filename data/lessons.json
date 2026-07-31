@@ -1,0 +1,167 @@
+[
+  {
+    "task": "test learning",
+    "result": {
+      "task": "test learning",
+      "success": true,
+      "result": "passed"
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "باتری",
+    "result": {
+      "task": "باتری",
+      "success": true,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد."
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "باتری",
+    "result": {
+      "task": "باتری",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد."
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "تست",
+    "result": {
+      "task": "تست",
+      "success": true,
+      "result": "عملیات با موفقیت انجام شد"
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "باتری",
+    "result": {
+      "task": "باتری",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "باتری",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "تست",
+    "result": {
+      "task": "تست",
+      "success": true,
+      "result": "عملیات با موفقیت انجام شد"
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "سلام",
+    "result": {
+      "task": "سلام",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "سلام",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "خوبی؟",
+    "result": {
+      "task": "خوبی؟",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "خوبی؟",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "من علیرضا هستم",
+    "result": {
+      "task": "من علیرضا هستم",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "من علیرضا هستم",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "باتری",
+    "result": {
+      "task": "باتری",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "باتری",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "یک اپ ماظین حساب برام بساز",
+    "result": {
+      "task": "یک اپ ماظین حساب برام بساز",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "یک اپ ماظین حساب برام بساز",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "سلام",
+    "result": {
+      "task": "سلام",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "سلام",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  },
+  {
+    "task": "خوبی؟",
+    "result": {
+      "task": "خوبی؟",
+      "success": false,
+      "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+      "weakness": {
+        "task": "خوبی؟",
+        "result": "فعلاً قابلیتی برای این درخواست وجود ندارد.",
+        "weakness": "missing_capability",
+        "suggestion": "نیاز به توسعه Capability جدید"
+      }
+    },
+    "improvement": "analyze future performance"
+  }
+]

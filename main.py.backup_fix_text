@@ -1,0 +1,49 @@
+from core.kernel.bootstrap import *
+from core.cortex.cortex import cortex
+from core.runtime.runtime_router_bridge import RuntimeRouterBridge
+
+
+router_bridge = RuntimeRouterBridge()
+
+
+def main():
+
+
+    cortex.boot()
+
+    while True:
+
+        text = input("\n👤 ")
+
+        if text in [
+            "exit",
+            "quit",
+            "خروج"
+        ]:
+            break
+
+        
+route_result = router_bridge.execute(text)
+
+print("[ROUTER]", route_result)
+
+if route_result.get("route") == "conversation":
+    print(cortex.think(text))
+
+elif route_result.get("route") == "memory":
+    print({
+        "memory_action":"save_experience",
+        "input":text,
+        "status":"sent_to_memory"
+    })
+
+elif route_result.get("route") == "project_builder":
+    print({
+        "builder_action":"build_project",
+        "project_request":text,
+        "status":"sent_to_builder"
+    })
+
+
+if __name__ == "__main__":
+    main()

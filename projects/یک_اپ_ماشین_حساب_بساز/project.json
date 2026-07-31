@@ -1,0 +1,66 @@
+{
+    "project": "یک_اپ_ماشین_حساب_بساز",
+    "pipeline": [
+        {
+            "request": "یک اپ ماشین حساب بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/main.py"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/database.py"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/test.py"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "project": "یک_اپ_ماشین_حساب_بساز",
+            "tests": "executed",
+            "status": "passed"
+        },
+        {
+            "project": "یک_اپ_ماشین_حساب_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "یک_اپ_ماشین_حساب_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

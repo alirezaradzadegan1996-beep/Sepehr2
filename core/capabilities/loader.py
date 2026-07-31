@@ -1,31 +1,64 @@
+import os
 import importlib
-import pkgutil
 
 from core.capabilities import registry
-import core.capabilities
+
+
+CAPABILITY_PATH = "core.capabilities"
 
 
 def discover():
 
-    package = core.capabilities
+    loaded = []
 
-    for _, name, _ in pkgutil.iter_modules(package.__path__):
 
-        if name in [
-            "registry",
-            "loader",
-            "bootstrap"
-        ]:
-            continue
+    path = "core/capabilities"
 
-        module = importlib.import_module(
-            f"core.capabilities.{name}"
-        )
 
-        if hasattr(module, "capability"):
-            registry.register(
-                name,
-                module.capability
-            )
+    for file in os.listdir(path):
 
-    return registry.list()
+        if (
+            file.endswith(".py")
+            and not file.endswith(".backup.py")
+            and file not in [
+                "__init__.py",
+                "loader.py"
+            ]
+        ):
+
+            name = file[:-3]
+
+
+            try:
+
+                module = importlib.import_module(
+                    f"{CAPABILITY_PATH}.{name}"
+                )
+
+
+                if hasattr(module,"capability"):
+
+                    obj = module.capability
+
+
+                    registry.register(
+                        obj.name,
+                        obj
+                    )
+
+
+                    loaded.append(
+                        obj.name
+                    )
+
+
+            except Exception as e:
+
+                print(
+                    "[Capability Error]",
+                    name,
+                    e
+                )
+
+
+    return loaded
