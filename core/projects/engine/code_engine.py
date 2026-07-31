@@ -11,6 +11,7 @@ class CodeEngine:
 
         path = f"projects/{project}/{filename}"
 
+
         os.makedirs(
             os.path.dirname(path),
             exist_ok=True
@@ -29,6 +30,29 @@ class CodeEngine:
         return {
             "status": "created",
             "file": path
+        }
+
+
+
+    def generate(self, project, templates):
+
+        results = []
+
+
+        for filename, content in templates.items():
+
+            results.append(
+                self.create_file(
+                    project,
+                    filename,
+                    content
+                )
+            )
+
+
+        return {
+            "files": results,
+            "status": "code_generated"
         }
 
 

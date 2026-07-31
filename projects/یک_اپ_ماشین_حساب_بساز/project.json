@@ -28,14 +28,6 @@
                 {
                     "status": "created",
                     "file": "projects/یک_اپ_ماشین_حساب_بساز/main.py"
-                },
-                {
-                    "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/database.py"
-                },
-                {
-                    "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/test.py"
                 }
             ],
             "status": "code_generated"
@@ -47,9 +39,8 @@
             "status": "ready"
         },
         {
-            "project": "یک_اپ_ماشین_حساب_بساز",
-            "tests": "executed",
-            "status": "passed"
+            "status": "passed",
+            "output": "8\n"
         },
         {
             "project": "یک_اپ_ماشین_حساب_بساز",
