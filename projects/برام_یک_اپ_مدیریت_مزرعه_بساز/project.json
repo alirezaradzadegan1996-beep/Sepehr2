@@ -1,18 +1,16 @@
 {
-    "project": "یک_اپ_ماشین_حساب_بساز",
+    "project": "برام_یک_اپ_مدیریت_مزرعه_بساز",
     "pipeline": [
         {
-            "request": "یک اپ ماشین حساب بساز",
-            "project_type": "calculator",
+            "request": "برام یک اپ مدیریت مزرعه بساز",
+            "project_type": "general",
             "features": [
-                "operations",
-                "interface",
-                "testing"
+                "basic_structure"
             ],
             "status": "understood"
         },
         {
-            "request": "یک اپ ماشین حساب بساز",
+            "request": "برام یک اپ مدیریت مزرعه بساز",
             "type": "application",
             "status": "analyzed"
         },
@@ -34,20 +32,7 @@
             "status": "created"
         },
         {
-            "files": [
-                {
-                    "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/main.py"
-                },
-                {
-                    "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/database.py"
-                },
-                {
-                    "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/test.py"
-                }
-            ],
+            "files": [],
             "status": "code_generated"
         },
         {
@@ -58,15 +43,15 @@
         },
         {
             "status": "passed",
-            "output": "8\n"
+            "output": ""
         },
         {
-            "project": "یک_اپ_ماشین_حساب_بساز",
+            "project": "برام_یک_اپ_مدیریت_مزرعه_بساز",
             "errors": 0,
             "status": "clean"
         },
         {
-            "project": "یک_اپ_ماشین_حساب_بساز",
+            "project": "برام_یک_اپ_مدیریت_مزرعه_بساز",
             "delivery": "completed",
             "status": "ready"
         }

@@ -97,9 +97,15 @@ class FullBuilderEngine:
         )
 
 
-        templates = template_engine.load(
-            template
-        )
+        if isinstance(template, dict):
+
+            templates = template
+
+        else:
+
+            templates = template_engine.load(
+                template
+            )
 
 
         return code_engine.generate(
