@@ -1,0 +1,73 @@
+{
+    "project": "برام_ی_اپ_لوازم_خانگی_بساز_",
+    "pipeline": [
+        {
+            "request": "برام ی اپ لوازم خانگی بساز ",
+            "project_type": "ecommerce",
+            "features": [
+                "products",
+                "users",
+                "cart",
+                "database",
+                "inventory"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "برام ی اپ لوازم خانگی بساز ",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/برام_ی_اپ_لوازم_خانگی_بساز_/template"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_ی_اپ_لوازم_خانگی_بساز_/status"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "برام_ی_اپ_لوازم_خانگی_بساز_",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "برام_ی_اپ_لوازم_خانگی_بساز_",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

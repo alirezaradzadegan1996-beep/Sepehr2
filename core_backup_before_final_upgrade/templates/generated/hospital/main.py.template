@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: hospital
+"""
+
+
+def main():
+
+    print("Sepehr generated hospital")
+
+
+if __name__ == "__main__":
+
+    main()
+

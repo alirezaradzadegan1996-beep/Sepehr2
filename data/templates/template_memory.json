@@ -1,0 +1,30 @@
+{
+    "اپ_بیمارستان": {
+        "features": [
+            "database",
+            "users",
+            "interface"
+        ],
+        "usage": 1
+    },
+    "مدیریت_دامداری": {
+        "features": [
+            "مدیریت"
+        ],
+        "usage": 1
+    },
+    "کنترل_نیروگاه": {
+        "features": [
+            "database",
+            "users",
+            "interface"
+        ],
+        "usage": 1
+    },
+    "قطعات_هواپیما": {
+        "features": [
+            "فروش"
+        ],
+        "usage": 1
+    }
+}

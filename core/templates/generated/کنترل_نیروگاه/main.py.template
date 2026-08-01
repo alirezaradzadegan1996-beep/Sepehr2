@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: کنترل_نیروگاه
+"""
+
+
+def main():
+
+    print("Sepehr generated کنترل_نیروگاه")
+
+
+if __name__ == "__main__":
+
+    main()
+

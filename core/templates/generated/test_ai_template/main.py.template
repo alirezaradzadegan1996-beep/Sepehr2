@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: test_ai_template
+"""
+
+
+def main():
+
+    print("Sepehr generated test_ai_template")
+
+
+if __name__ == "__main__":
+
+    main()
+

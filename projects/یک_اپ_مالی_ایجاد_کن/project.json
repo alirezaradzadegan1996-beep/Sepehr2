@@ -1,0 +1,75 @@
+{
+    "project": "یک_اپ_مالی_ایجاد_کن",
+    "pipeline": [
+        {
+            "request": "یک اپ مالی ایجاد کن",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "یک اپ مالی ایجاد کن",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_ایجاد_کن/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_ایجاد_کن/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_ایجاد_کن/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "یک_اپ_مالی_ایجاد_کن",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "یک_اپ_مالی_ایجاد_کن",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

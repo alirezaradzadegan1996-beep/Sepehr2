@@ -1,0 +1,69 @@
+{
+    "project": "برام_یک_اپ_ادیت_فیلم_بفرست",
+    "pipeline": [
+        {
+            "request": "برام یک اپ ادیت فیلم بفرست",
+            "project_type": "general",
+            "features": [
+                "basic_structure"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "برام یک اپ ادیت فیلم بفرست",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_ادیت_فیلم_بفرست/template"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_ادیت_فیلم_بفرست/status"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "برام_یک_اپ_ادیت_فیلم_بفرست",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "برام_یک_اپ_ادیت_فیلم_بفرست",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

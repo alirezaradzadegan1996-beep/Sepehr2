@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: mobile_shop
+"""
+
+
+def main():
+
+    print("Sepehr generated mobile_shop")
+
+
+if __name__ == "__main__":
+
+    main()
+

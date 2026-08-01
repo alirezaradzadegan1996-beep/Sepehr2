@@ -1,0 +1,75 @@
+{
+    "project": "یک_اپ_مالی_بساز",
+    "pipeline": [
+        {
+            "request": "یک اپ مالی بساز",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "یک اپ مالی بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_بساز/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_بساز/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_اپ_مالی_بساز/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "یک_اپ_مالی_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "یک_اپ_مالی_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

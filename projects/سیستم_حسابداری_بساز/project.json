@@ -1,0 +1,75 @@
+{
+    "project": "سیستم_حسابداری_بساز",
+    "pipeline": [
+        {
+            "request": "سیستم حسابداری بساز",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "سیستم حسابداری بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/سیستم_حسابداری_بساز/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/سیستم_حسابداری_بساز/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/سیستم_حسابداری_بساز/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "سیستم_حسابداری_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "سیستم_حسابداری_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

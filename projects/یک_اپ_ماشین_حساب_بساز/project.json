@@ -3,11 +3,11 @@
     "pipeline": [
         {
             "request": "یک اپ ماشین حساب بساز",
-            "project_type": "calculator",
+            "project_type": "general",
             "features": [
-                "operations",
-                "interface",
-                "testing"
+                "database",
+                "users",
+                "interface"
             ],
             "status": "understood"
         },
@@ -37,15 +37,15 @@
             "files": [
                 {
                     "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/main.py"
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/type"
                 },
                 {
                     "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/database.py"
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/features"
                 },
                 {
                     "status": "created",
-                    "file": "projects/یک_اپ_ماشین_حساب_بساز/test.py"
+                    "file": "projects/یک_اپ_ماشین_حساب_بساز/template"
                 }
             ],
             "status": "code_generated"
@@ -58,7 +58,7 @@
         },
         {
             "status": "passed",
-            "output": "8\n"
+            "output": ""
         },
         {
             "project": "یک_اپ_ماشین_حساب_بساز",

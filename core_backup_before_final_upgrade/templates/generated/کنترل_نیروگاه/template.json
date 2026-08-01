@@ -1,0 +1,9 @@
+{
+    "project_type": "کنترل_نیروگاه",
+    "features": [
+        "database",
+        "users",
+        "interface"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

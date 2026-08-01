@@ -1,0 +1,204 @@
+import json
+from pathlib import Path
+
+CAP_FILE = Path("data/capabilities.json")
+
+
+class CapabilityRegistry:
+
+    def __init__(self):
+        self.capabilities = {}
+        self.load()
+
+
+    def register(self, name, capability):
+        self.capabilities[name] = capability
+        self.save()
+
+        return {
+            "status": "registered",
+            "capability": name
+        }
+
+
+    def find(self, name):
+        return self.capabilities.get(name)
+
+
+    def list(self):
+        return list(self.capabilities.keys())
+
+
+    def route(self, text):
+        text_lower = text.lower()
+
+        candidates = []
+
+        for name, cap in self.capabilities.items():
+
+            score = 0
+
+            # keyword scoring
+            try:
+                for keyword in getattr(cap, "keywords", []):
+                    if str(keyword).lower() in text_lower:
+                        score += 3
+            except:
+                pass
+
+            # alias scoring
+            try:
+                for alias in getattr(cap, "aliases", []):
+                    if str(alias).lower() in text_lower:
+                        score += 4
+            except:
+                pass
+
+            # native handler
+            try:
+                if cap.can_handle(text):
+                    score += 2
+            except:
+                pass
+
+            # name similarity
+            try:
+                clean_name = (
+                    name
+                    .replace("_ai","")
+                    .replace("_"," ")
+                    .lower()
+                )
+
+                if clean_name in text_lower:
+                    score += 5
+
+            except:
+                pass
+
+            if score:
+                candidates.append({
+                    "name": name,
+                    "score": score
+                })
+
+
+        if candidates:
+            candidates.sort(
+                key=lambda x:x["score"],
+                reverse=True
+            )
+
+            return candidates[0]["name"]
+
+        return None
+
+
+
+    def find_candidates(self, text):
+
+        text_lower = text.lower()
+
+        candidates = []
+
+
+        for name, cap in self.capabilities.items():
+
+            score = 0
+
+
+            try:
+                for keyword in getattr(cap, "keywords", []):
+                    if str(keyword).lower() in text_lower:
+                        score += 3
+            except:
+                pass
+
+
+            try:
+                for alias in getattr(cap, "aliases", []):
+                    if str(alias).lower() in text_lower:
+                        score += 4
+            except:
+                pass
+
+
+            try:
+                if cap.can_handle(text):
+                    score += 2
+            except:
+                pass
+
+
+            if score:
+                candidates.append(
+                    {
+                        "name": name,
+                        "score": score
+                    }
+                )
+
+
+        candidates.sort(
+            key=lambda x:x["score"],
+            reverse=True
+        )
+
+        return candidates
+
+\n    def save(self):
+        CAP_FILE.parent.mkdir(exist_ok=True)
+
+        data = {}
+
+        for name, cap in self.capabilities.items():
+
+            # KEYWORD MATCHER LAYER
+            try:
+                for keyword in getattr(cap, "keywords", []):
+                    if str(keyword).lower() in text_lower:
+                        return name
+            except:
+                pass
+            data[name] = {
+                "name": name,
+                "type": str(type(cap))
+            }
+
+        CAP_FILE.write_text(
+            json.dumps(
+                data,
+                ensure_ascii=False,
+                indent=2
+            ),
+            encoding="utf-8"
+        )
+
+
+    def load(self):
+        if CAP_FILE.exists():
+            try:
+                data = json.loads(
+                    CAP_FILE.read_text(encoding="utf-8")
+                )
+
+                from importlib import import_module
+
+                for name in data:
+                    try:
+                        module = import_module(
+                            f"core.capabilities.{name}"
+                        )
+
+                        if hasattr(module, "capability"):
+                            self.capabilities[name] = module.capability
+
+                    except Exception:
+                        pass
+
+            except Exception:
+                pass
+
+
+capability_registry = CapabilityRegistry()
+registry = capability_registry

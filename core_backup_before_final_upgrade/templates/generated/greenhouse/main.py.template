@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: greenhouse
+"""
+
+
+def main():
+
+    print("Sepehr generated greenhouse")
+
+
+if __name__ == "__main__":
+
+    main()
+

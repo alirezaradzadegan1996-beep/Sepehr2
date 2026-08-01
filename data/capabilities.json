@@ -1,0 +1,22 @@
+{
+  "store_manager_ai": {
+    "name": "store_manager_ai",
+    "type": "<class 'core.capabilities.store_manager_ai.StoreManagerAiCapability'>"
+  },
+  "accounting_ai": {
+    "name": "accounting_ai",
+    "type": "<class 'core.capabilities.accounting_ai.AccountingAiCapability'>"
+  },
+  "inventory_ai": {
+    "name": "inventory_ai",
+    "type": "<class 'core.capabilities.inventory_ai.InventoryAiCapability'>"
+  },
+  "مدیریت_گلخانه_ai": {
+    "name": "مدیریت_گلخانه_ai",
+    "type": "<class 'core.capabilities.مدیریت_گلخانه_ai.مدیریتگلخانهAiCapability'>"
+  },
+  "مدیریت_مرغداری_ai": {
+    "name": "مدیریت_مرغداری_ai",
+    "type": "<class 'core.capabilities.مدیریت_مرغداری_ai.مدیریتمرغداریAiCapability'>"
+  }
+}

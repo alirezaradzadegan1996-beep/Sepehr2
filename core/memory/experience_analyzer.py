@@ -1,44 +1,59 @@
-from core.memory.experience_memory import experience_memory
+from collections import defaultdict
 
 
 class ExperienceAnalyzer:
 
+    def analyze(self, task, experiences):
 
-    def analyze(self, skill=None):
+        similar = []
 
+        words = set(task.split())
 
-        data = experience_memory.recall()
+        for exp in experiences:
 
-
-        results = []
-
-
-        for item in data:
-
-
-            if skill:
-
-                if item.get("skill") != skill:
-                    continue
-
-
-            results.append(
-                {
-                    "skill": item.get("skill"),
-                    "result": item.get("result"),
-                    "lesson": item.get("lesson")
-                }
+            text = str(
+                exp.get("goal")
+                or exp.get("input")
+                or ""
             )
 
+            score = len(
+                words.intersection(
+                    set(text.split())
+                )
+            )
+
+            if score > 0:
+                similar.append(
+                    {
+                        "experience": exp,
+                        "score": score
+                    }
+                )
+
+        similar.sort(
+            key=lambda x: x["score"],
+            reverse=True
+        )
+
+        success = [
+            x for x in similar
+            if x["experience"].get("result") == "success"
+        ]
 
         return {
-
-            "count": len(results),
-
-            "experiences": results
-
+            "task": task,
+            "similar_count": len(similar),
+            "successful_count": len(success),
+            "best": (
+                success[0]
+                if success
+                else None
+            ),
+            "confidence": (
+                min(len(success) / 5, 1)
+            )
         }
-
 
 
 experience_analyzer = ExperienceAnalyzer()

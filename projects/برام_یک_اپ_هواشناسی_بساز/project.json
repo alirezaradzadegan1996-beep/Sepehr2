@@ -1,0 +1,75 @@
+{
+    "project": "برام_یک_اپ_هواشناسی_بساز",
+    "pipeline": [
+        {
+            "request": "برام یک اپ هواشناسی بساز",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "برام یک اپ هواشناسی بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_هواشناسی_بساز/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_هواشناسی_بساز/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_هواشناسی_بساز/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "برام_یک_اپ_هواشناسی_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "برام_یک_اپ_هواشناسی_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

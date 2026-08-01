@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: farm_management
+"""
+
+
+def main():
+
+    print("Sepehr generated farm_management")
+
+
+if __name__ == "__main__":
+
+    main()
+

@@ -1,0 +1,23 @@
+{
+  "accounting_ai": {
+    "version": 1,
+    "uses": 20,
+    "success": 20,
+    "failed": 0,
+    "last_used": "2026-08-01 05:21:38.857497"
+  },
+  "inventory_ai": {
+    "version": 1,
+    "uses": 3,
+    "success": 3,
+    "failed": 0,
+    "last_used": "2026-08-01 04:10:44.268869"
+  },
+  "store_manager_ai": {
+    "version": 1,
+    "uses": 5,
+    "success": 5,
+    "failed": 0,
+    "last_used": "2026-08-01 05:19:49.453392"
+  }
+}

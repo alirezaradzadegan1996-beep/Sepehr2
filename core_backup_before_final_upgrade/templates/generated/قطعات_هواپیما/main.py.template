@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: قطعات_هواپیما
+"""
+
+
+def main():
+
+    print("Sepehr generated قطعات_هواپیما")
+
+
+if __name__ == "__main__":
+
+    main()
+

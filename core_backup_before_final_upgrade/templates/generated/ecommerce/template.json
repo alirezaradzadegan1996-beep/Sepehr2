@@ -1,0 +1,11 @@
+{
+    "project_type": "ecommerce",
+    "features": [
+        "products",
+        "users",
+        "cart",
+        "database",
+        "inventory"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

@@ -1,0 +1,8 @@
+{
+    "project_type": "greenhouse",
+    "features": [
+        "plants",
+        "database"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

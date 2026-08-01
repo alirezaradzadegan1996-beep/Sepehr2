@@ -1,0 +1,14 @@
+{
+  "مدیریت_گلخانه_ai": {
+    "version": 2,
+    "status": "evolved"
+  },
+  "accounting_ai": {
+    "version": 2,
+    "status": "evolved"
+  },
+  "store_manager_ai": {
+    "version": 2,
+    "status": "evolved"
+  }
+}

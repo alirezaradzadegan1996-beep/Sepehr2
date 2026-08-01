@@ -1,0 +1,82 @@
+from collections import defaultdict
+
+
+class MemoryIntelligence:
+
+
+    def __init__(self):
+
+        self.patterns = defaultdict(int)
+
+
+
+    def analyze(self, experience):
+
+
+        task = experience.get(
+            "task",
+            experience.get(
+                "input",
+                "unknown"
+            )
+        )
+
+
+        success = experience.get(
+            "success",
+            False
+        )
+
+
+        self.patterns[task] += 1
+
+
+        importance = 1
+
+
+        if not success:
+
+            importance += 5
+
+
+        if self.patterns[task] > 3:
+
+            importance += 3
+
+
+
+        return {
+
+            "task": task,
+
+            "frequency": self.patterns[task],
+
+            "importance": importance,
+
+            "learning_needed": not success
+
+        }
+
+
+
+    def get_priorities(self):
+
+        result = []
+
+
+        for task,count in self.patterns.items():
+
+            result.append({
+
+                "task": task,
+
+                "frequency": count
+
+            })
+
+
+        return result
+
+
+
+memory_intelligence = MemoryIntelligence()

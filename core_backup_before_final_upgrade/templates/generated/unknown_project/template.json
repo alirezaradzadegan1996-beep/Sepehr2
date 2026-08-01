@@ -1,0 +1,9 @@
+{
+    "project_type": "unknown_project",
+    "features": [
+        "database",
+        "users",
+        "interface"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

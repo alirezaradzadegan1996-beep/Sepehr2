@@ -1,0 +1,75 @@
+{
+    "project": "مدیریت_انبار_بساز",
+    "pipeline": [
+        {
+            "request": "مدیریت انبار بساز",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "مدیریت انبار بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/مدیریت_انبار_بساز/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/مدیریت_انبار_بساز/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/مدیریت_انبار_بساز/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "مدیریت_انبار_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "مدیریت_انبار_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

@@ -1,5 +1,10 @@
 from datetime import datetime
 
+try:
+    from core.capabilities.registry import registry
+except:
+    registry = None
+
 
 class SkillEvolutionCore:
 
@@ -25,6 +30,12 @@ class SkillEvolutionCore:
             "version": "1.0",
             "created": str(datetime.now())
         }
+
+        if registry:
+            registry.register(
+                name,
+                self.skills[name]
+            )
 
         return {
             "status": "created",

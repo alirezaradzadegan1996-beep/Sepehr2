@@ -1,0 +1,73 @@
+{
+    "project": "برام_یک_اپ_فروش_گوشی_بساز",
+    "pipeline": [
+        {
+            "request": "برام یک اپ فروش گوشی بساز",
+            "project_type": "ecommerce",
+            "features": [
+                "products",
+                "users",
+                "cart",
+                "database",
+                "inventory"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "برام یک اپ فروش گوشی بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_فروش_گوشی_بساز/template"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/برام_یک_اپ_فروش_گوشی_بساز/status"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "برام_یک_اپ_فروش_گوشی_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "برام_یک_اپ_فروش_گوشی_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

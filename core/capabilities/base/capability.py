@@ -2,6 +2,8 @@ class Capability:
 
 
     name = "unknown"
+    purpose = "general capability"
+    keywords = []
 
 
     def __init__(self):
@@ -11,6 +13,33 @@ class Capability:
         self.version = 1
 
 
+
+
+    def can_handle(self, text):
+        text = text.lower()
+
+        patterns = []
+
+        patterns.extend(
+            getattr(self, "keywords", [])
+        )
+
+        patterns.extend(
+            getattr(self, "aliases", [])
+        )
+
+        name = getattr(self, "name", "")
+        if name:
+            patterns.append(name)
+
+        for item in patterns:
+            try:
+                if str(item).lower() in text:
+                    return True
+            except:
+                pass
+
+        return False
 
     def activate(self):
 

@@ -1,0 +1,26 @@
+{
+  "مدیریت_مرغداری_ai": {
+    "uses": 2,
+    "success": 2,
+    "fail": 0,
+    "score": 1.0
+  },
+  "مدیریت_گلخانه_ai": {
+    "uses": 28,
+    "success": 28,
+    "fail": 0,
+    "score": 1.0
+  },
+  "accounting_ai": {
+    "uses": 3,
+    "success": 3,
+    "fail": 0,
+    "score": 1.0
+  },
+  "store_manager_ai": {
+    "uses": 1,
+    "success": 1,
+    "fail": 0,
+    "score": 1.0
+  }
+}

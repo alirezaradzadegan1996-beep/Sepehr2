@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: ecommerce
+"""
+
+
+def main():
+
+    print("Sepehr generated ecommerce")
+
+
+if __name__ == "__main__":
+
+    main()
+

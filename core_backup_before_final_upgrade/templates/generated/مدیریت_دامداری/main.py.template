@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: مدیریت_دامداری
+"""
+
+
+def main():
+
+    print("Sepehr generated مدیریت_دامداری")
+
+
+if __name__ == "__main__":
+
+    main()
+

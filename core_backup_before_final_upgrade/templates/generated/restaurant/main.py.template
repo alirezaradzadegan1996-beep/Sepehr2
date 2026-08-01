@@ -1,0 +1,16 @@
+
+"""
+Generated Sepehr Template
+Type: restaurant
+"""
+
+
+def main():
+
+    print("Sepehr generated restaurant")
+
+
+if __name__ == "__main__":
+
+    main()
+

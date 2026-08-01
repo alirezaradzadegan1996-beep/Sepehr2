@@ -1,0 +1,37 @@
+{
+    "calculator": [
+        "operations",
+        "testing"
+    ],
+    "ecommerce": [
+        "products",
+        "users",
+        "cart",
+        "inventory"
+    ],
+    "car_marketplace": [
+        "cars",
+        "users",
+        "database"
+    ],
+    "hospital": [
+        "patients",
+        "doctors",
+        "database"
+    ],
+    "restaurant": [
+        "menu",
+        "orders",
+        "users"
+    ],
+    "farm_management": [
+        "plants",
+        "inventory",
+        "database"
+    ],
+    "mobile_shop": [
+        "products",
+        "sales",
+        "inventory"
+    ]
+}

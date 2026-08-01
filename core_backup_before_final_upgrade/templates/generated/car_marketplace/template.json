@@ -1,0 +1,9 @@
+{
+    "project_type": "car_marketplace",
+    "features": [
+        "cars",
+        "users",
+        "database"
+    ],
+    "generated_by": "Sepehr Template Creator"
+}

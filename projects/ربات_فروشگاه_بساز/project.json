@@ -1,0 +1,75 @@
+{
+    "project": "ربات_فروشگاه_بساز",
+    "pipeline": [
+        {
+            "request": "ربات فروشگاه بساز",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "ربات فروشگاه بساز",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/ربات_فروشگاه_بساز/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/ربات_فروشگاه_بساز/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/ربات_فروشگاه_بساز/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "ربات_فروشگاه_بساز",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "ربات_فروشگاه_بساز",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}
