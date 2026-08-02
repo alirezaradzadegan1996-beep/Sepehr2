@@ -1,10 +1,10 @@
 import json
 import os
+import re
 from datetime import datetime
 
 
 class KnowledgeBrain:
-
 
     def __init__(self):
 
@@ -28,6 +28,41 @@ class KnowledgeBrain:
                     f,
                     ensure_ascii=False
                 )
+
+
+    def _normalize(self, text):
+
+        text = str(text).lower()
+
+        replacements = {
+            "چیست": "",
+            "چی هست": "",
+            "است": "",
+            "؟": "",
+            "?": ""
+        }
+
+        for old,new in replacements.items():
+
+            text = text.replace(
+                old,
+                new
+            )
+
+        return text.strip()
+
+
+    def _keywords(self, text):
+
+        normalized = self._normalize(text)
+
+        words = re.findall(
+            r"[\wآ-ی]+",
+            normalized
+        )
+
+        return words
+
 
 
     def add_knowledge(self, topic, info):
@@ -65,7 +100,7 @@ class KnowledgeBrain:
 
 
 
-    def search(self, topic):
+    def query(self, question):
 
         with open(
             self.file,
@@ -76,47 +111,65 @@ class KnowledgeBrain:
             data=json.load(f)
 
 
-        return {
-            "topic":topic,
-            "result":data.get(
-                topic,
-                "unknown"
-            ),
-            "status":"retrieved"
-        }
+        # direct match
 
-
-
-
-    def query(self, topic):
-
-        with open(
-            self.file,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            data = json.load(f)
-
-
-        result = data.get(
-            topic,
-            None
-        )
-
-
-        if result:
+        if question in data:
 
             return {
-                "topic":topic,
-                "answer":result,
+                "topic":question,
+                "answer":data[question],
                 "source":"knowledge_brain",
                 "status":"found"
             }
 
 
+        # semantic keyword match
+
+        query_words = set(
+            self._keywords(question)
+        )
+
+
+        best = None
+        score = 0
+
+
+        for topic,info in data.items():
+
+            topic_words = set(
+                self._keywords(topic)
+            )
+
+
+            current = len(
+                query_words.intersection(
+                    topic_words
+                )
+            )
+
+
+            if current > score:
+
+                score = current
+                best = (
+                    topic,
+                    info
+                )
+
+
+        if best and score > 0:
+
+            return {
+                "topic":best[0],
+                "answer":best[1],
+                "source":"knowledge_brain_semantic",
+                "score":score,
+                "status":"found"
+            }
+
+
         return {
-            "topic":topic,
+            "topic":question,
             "answer":None,
             "source":"knowledge_brain",
             "status":"not_found"
@@ -124,43 +177,17 @@ class KnowledgeBrain:
 
 
 
+    def search(self, topic):
+
+        return self.query(topic)
+
+
     def learn(self, topic, information):
 
-        self.add_knowledge(
+        return self.add_knowledge(
             topic,
             information
         )
 
 
-        return {
-            "topic":topic,
-            "saved":True,
-            "status":"learned"
-        }
-
-
-
 brain = KnowledgeBrain()
-
-
-print(
-    brain.add_knowledge(
-        "AI",
-        "Artificial Intelligence studies intelligent systems"
-    )
-)
-
-
-print(
-    brain.search(
-        "AI"
-    )
-)
-
-
-print(
-    {
-        "status":"knowledge_brain_active",
-        "time":str(datetime.now())
-    }
-)

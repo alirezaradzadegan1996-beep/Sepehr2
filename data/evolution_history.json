@@ -172,5 +172,15 @@
     "action": "increase_priority",
     "version": 2,
     "time": "2026-08-01 21:18:01.931852"
+  },
+  {
+    "capability": "مدیریت_گلخانه_ai",
+    "action": "increase_priority",
+    "version": 2,
+    "time": "2026-08-01 23:07:10.318372"
+  },
+  {
+    "upgrade": "phase10",
+    "status": "success"
   }
 ]

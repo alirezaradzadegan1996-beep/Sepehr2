@@ -1,0 +1,41 @@
+class ExperienceMemory:
+
+    def __init__(self):
+        self.experiences = []
+
+
+    def save(self, experience):
+
+        self.experiences.append(experience)
+
+        return {
+            "experience": experience,
+            "status": "stored",
+            "count": len(self.experiences)
+        }
+
+
+    def recall(self):
+
+        return {
+            "experiences": self.experiences,
+            "count": len(self.experiences),
+            "status": "recalled"
+        }
+
+
+    def search(self, keyword):
+
+        results = []
+
+        for item in self.experiences:
+            if keyword in str(item):
+                results.append(item)
+
+        return {
+            "results": results,
+            "status": "search_completed"
+        }
+
+
+experience_memory = ExperienceMemory()

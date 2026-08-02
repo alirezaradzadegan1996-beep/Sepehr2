@@ -1,11 +1,12 @@
+
 class ConceptLearning:
 
-
-    def learn(self, information):
+    def learn(self, concept):
 
         return {
-            "concept":information,
-            "status":"learned"
+            "concept": concept,
+            "knowledge": "acquired",
+            "status": "learned"
         }
 
 

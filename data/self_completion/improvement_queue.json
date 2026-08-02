@@ -1,0 +1,52 @@
+[
+  {
+    "type": "missing_module",
+    "target": "debugger",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "debugger",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "debugger",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase3_auto_test_module",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase3_auto_test_module",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase4_test_module",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase4_final_test",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase4_final_test",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase4_memory_final",
+    "priority": "high"
+  },
+  {
+    "type": "missing_module",
+    "target": "phase4_final_memory_check",
+    "priority": "high"
+  }
+]

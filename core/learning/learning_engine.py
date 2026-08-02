@@ -1,27 +1,26 @@
-from core.memory.memory_core import memory_core
+
+from core.learning.experience_store import experience_store
+from core.learning.pattern_analyzer import pattern_analyzer
 
 
 class LearningEngine:
 
+    def learn(self, experience):
 
-    def analyze_result(self, task, result):
+        saved = experience_store.save(
+            experience
+        )
 
-        lesson = {
+        analysis = pattern_analyzer.analyze(
+            [experience]
+        )
 
-            "task": task,
-
-            "result": result,
-
-            "improvement":
-            "analyze future performance"
-
+        return {
+            "memory": saved,
+            "analysis": analysis,
+            "knowledge": "updated",
+            "status": "LEARNING_ACTIVE"
         }
-
-
-        memory_core.learn(lesson)
-
-        return lesson
-
 
 
 learning_engine = LearningEngine()

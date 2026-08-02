@@ -1,0 +1,969 @@
+[
+  {
+    "type": "reasoning_upgrade",
+    "problem": "weak comparison answer",
+    "solution": "comparison reasoning template",
+    "time": "2026-08-03 01:53:28.893106"
+  },
+  {
+    "task": "تفاوت خودرو با دوچرخه چیه؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      },
+      {
+        "type": "reasoning_required",
+        "source": "decision"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      },
+      {
+        "problem": "reasoning_required",
+        "solution": "upgrade_reasoning_engine"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 01:54:16.151065"
+  },
+  {
+    "task": "تفاوت تلویزیون با قابلمه چیه؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      },
+      {
+        "type": "reasoning_required",
+        "source": "decision"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      },
+      {
+        "problem": "reasoning_required",
+        "solution": "upgrade_reasoning_engine"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 01:58:03.713609"
+  },
+  {
+    "task": "تفاوت تلویزیون با قابلمه چیه؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "تفاوت تلویزیون با قابلمه چیه؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          },
+          {
+            "type": "reasoning_required",
+            "source": "decision"
+          }
+        ],
+        "problem_count": 4,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          },
+          {
+            "problem": "reasoning_required",
+            "solution": "upgrade_reasoning_engine"
+          }
+        ],
+        "count": 4
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 01:58:03.714150"
+  },
+  {
+    "task": "تفاوت تلویزیون با قابلمه چیه؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "change": "add reasoning pattern improvement",
+          "reason": "weak reasoning response",
+          "risk": "medium"
+        }
+      ],
+      "count": 3
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "status": "approved_for_test",
+          "risk": "medium"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 01:58:03.714887"
+  },
+  {
+    "task": "تفاوت مجسمه و مبل رو بگو؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:00:13.769968"
+  },
+  {
+    "task": "تفاوت مجسمه و مبل رو بگو؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "تفاوت مجسمه و مبل رو بگو؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          }
+        ],
+        "problem_count": 3,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          }
+        ],
+        "count": 3
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:00:13.771106"
+  },
+  {
+    "task": "تفاوت مجسمه و مبل رو بگو؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        }
+      ],
+      "count": 2
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:00:13.772253"
+  },
+  {
+    "task": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:02:28.794721"
+  },
+  {
+    "task": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          }
+        ],
+        "problem_count": 3,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          }
+        ],
+        "count": 3
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:02:28.796318"
+  },
+  {
+    "task": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        }
+      ],
+      "count": 2
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:02:28.797799"
+  },
+  {
+    "task": "چرا رنگ برگ درخت سبز است؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      },
+      {
+        "type": "reasoning_required",
+        "source": "decision"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      },
+      {
+        "problem": "reasoning_required",
+        "solution": "upgrade_reasoning_engine"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:28:40.876509"
+  },
+  {
+    "task": "چرا رنگ برگ درخت سبز است؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "چرا رنگ برگ درخت سبز است؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          },
+          {
+            "type": "reasoning_required",
+            "source": "decision"
+          }
+        ],
+        "problem_count": 4,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          },
+          {
+            "problem": "reasoning_required",
+            "solution": "upgrade_reasoning_engine"
+          }
+        ],
+        "count": 4
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:28:40.878380"
+  },
+  {
+    "task": "چرا رنگ برگ درخت سبز است؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "change": "add reasoning pattern improvement",
+          "reason": "weak reasoning response",
+          "risk": "medium"
+        }
+      ],
+      "count": 3
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "status": "approved_for_test",
+          "risk": "medium"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:28:40.880353"
+  },
+  {
+    "task": "سلام سپهر",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:42:45.985244"
+  },
+  {
+    "task": "سلام سپهر",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "سلام سپهر",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          }
+        ],
+        "problem_count": 3,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          }
+        ],
+        "count": 3
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:42:45.991468"
+  },
+  {
+    "task": "سلام سپهر",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        }
+      ],
+      "count": 2
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:42:45.998683"
+  },
+  {
+    "task": "اسم من چیست؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      },
+      {
+        "type": "reasoning_required",
+        "source": "decision"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      },
+      {
+        "problem": "reasoning_required",
+        "solution": "upgrade_reasoning_engine"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:42:59.877857"
+  },
+  {
+    "task": "اسم من چیست؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "اسم من چیست؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          },
+          {
+            "type": "reasoning_required",
+            "source": "decision"
+          }
+        ],
+        "problem_count": 4,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          },
+          {
+            "problem": "reasoning_required",
+            "solution": "upgrade_reasoning_engine"
+          }
+        ],
+        "count": 4
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:42:59.884909"
+  },
+  {
+    "task": "اسم من چیست؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "change": "add reasoning pattern improvement",
+          "reason": "weak reasoning response",
+          "risk": "medium"
+        }
+      ],
+      "count": 3
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "status": "approved_for_test",
+          "risk": "medium"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:42:59.892705"
+  },
+  {
+    "task": "چرا برگ درخت سبز است؟",
+    "problems": [
+      {
+        "type": "low_confidence",
+        "source": "experience"
+      },
+      {
+        "type": "no_success_history",
+        "source": "experience"
+      },
+      {
+        "type": "learning_needed",
+        "source": "memory"
+      },
+      {
+        "type": "reasoning_required",
+        "source": "decision"
+      }
+    ],
+    "plan": [
+      {
+        "problem": "low_confidence",
+        "solution": "improve_reasoning_quality"
+      },
+      {
+        "problem": "no_success_history",
+        "solution": "create_experience_pattern"
+      },
+      {
+        "problem": "learning_needed",
+        "solution": "expand_knowledge"
+      },
+      {
+        "problem": "reasoning_required",
+        "solution": "upgrade_reasoning_engine"
+      }
+    ],
+    "status": "planned",
+    "time": "2026-08-03 02:43:11.752072"
+  },
+  {
+    "task": "چرا برگ درخت سبز است؟",
+    "analysis": {
+      "status": "improvement_needed",
+      "analysis": {
+        "task": "چرا برگ درخت سبز است؟",
+        "problems": [
+          {
+            "type": "low_confidence",
+            "source": "experience"
+          },
+          {
+            "type": "no_success_history",
+            "source": "experience"
+          },
+          {
+            "type": "learning_needed",
+            "source": "memory"
+          },
+          {
+            "type": "reasoning_required",
+            "source": "decision"
+          }
+        ],
+        "problem_count": 4,
+        "needs_improvement": true
+      },
+      "plan": {
+        "status": "plan_created",
+        "plans": [
+          {
+            "problem": "low_confidence",
+            "solution": "improve_reasoning_quality"
+          },
+          {
+            "problem": "no_success_history",
+            "solution": "create_experience_pattern"
+          },
+          {
+            "problem": "learning_needed",
+            "solution": "expand_knowledge"
+          },
+          {
+            "problem": "reasoning_required",
+            "solution": "upgrade_reasoning_engine"
+          }
+        ],
+        "count": 4
+      }
+    },
+    "status": "detected",
+    "time": "2026-08-03 02:43:11.759425"
+  },
+  {
+    "task": "چرا برگ درخت سبز است؟",
+    "patches": {
+      "status": "patch_generated",
+      "patches": [
+        {
+          "target": "core/cognitive",
+          "change": "optimize reasoning templates",
+          "reason": "low confidence answers",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "change": "add missing knowledge entries",
+          "reason": "knowledge gap",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "change": "add reasoning pattern improvement",
+          "reason": "weak reasoning response",
+          "risk": "medium"
+        }
+      ],
+      "count": 3
+    },
+    "test": {
+      "status": "test_ready",
+      "results": [
+        {
+          "target": "core/cognitive",
+          "status": "approved_for_test",
+          "risk": "medium"
+        },
+        {
+          "target": "data/knowledge.json",
+          "status": "approved_for_test",
+          "risk": "low"
+        },
+        {
+          "target": "core/cognitive/self_reasoning.py",
+          "status": "approved_for_test",
+          "risk": "medium"
+        }
+      ]
+    },
+    "status": "ready",
+    "time": "2026-08-03 02:43:11.766997"
+  }
+]

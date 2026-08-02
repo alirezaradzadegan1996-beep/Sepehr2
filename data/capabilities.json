@@ -18,5 +18,9 @@
   "مدیریت_مرغداری_ai": {
     "name": "مدیریت_مرغداری_ai",
     "type": "<class 'core.capabilities.مدیریت_مرغداری_ai.مدیریتمرغداریAiCapability'>"
+  },
+  "debugger": {
+    "name": "debugger",
+    "type": "<class 'core.capabilities.debugger.DebuggerCapability'>"
   }
 }

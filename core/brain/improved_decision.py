@@ -9,7 +9,8 @@ class ImprovedDecision:
 
 
         experiences = experience_analyzer.analyze(
-            skill
+            skill,
+            []
         )
 
 

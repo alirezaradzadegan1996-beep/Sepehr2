@@ -1,0 +1,11 @@
+
+class ExperienceMemory:
+
+    def save(self,experience):
+        return {
+            "experience":experience,
+            "status":"stored"
+        }
+
+
+experience_memory=ExperienceMemory()

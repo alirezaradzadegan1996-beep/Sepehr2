@@ -1,0 +1,48 @@
+from core.self_completion.project_analyzer import project_analyzer
+from core.self_completion.gap_detector import gap_detector
+from core.self_completion.improvement_queue import improvement_queue
+from core.self_completion.improvement_planner import improvement_planner
+from core.self_completion.priority_selector import priority_selector
+from core.self_completion.executor.self_executor_engine import self_executor_engine
+
+
+class SelfCompletionEngine:
+
+    def run_analysis(self):
+
+        analysis = project_analyzer.analyze()
+
+        gaps = gap_detector.detect()
+
+        queue = improvement_queue.build(gaps)
+
+        plan = improvement_planner.create_plan(
+            gaps.get("missing", [])
+        )
+
+        priority = priority_selector.select(plan)
+
+        executed = []
+
+        for task in priority:
+            try:
+                result = self_executor_engine.execute(task)
+                executed.append(result)
+            except Exception as e:
+                executed.append({
+                    "target": task.get("target"),
+                    "status": "failed",
+                    "error": str(e)
+                })
+
+        return {
+            "analysis": analysis,
+            "gaps": gaps,
+            "queue": queue,
+            "plan": plan,
+            "priority_plan": priority,
+            "executed": executed
+        }
+
+
+self_completion_engine = SelfCompletionEngine()

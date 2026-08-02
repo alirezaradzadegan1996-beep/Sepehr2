@@ -1,0 +1,159 @@
+from core.cognitive.comparison_reasoning import comparison_reasoning
+
+
+class SelfReasoning:
+
+    def analyze(self, problem):
+
+        
+        
+        comparison = comparison_reasoning.analyze(text)
+
+        if comparison:
+            return {
+                "problem": problem,
+                "knowledge_used": False,
+                "reasoning_steps": [
+                    "understand_problem",
+                    "comparison_analysis"
+                ],
+                "conclusion": comparison["answer"],
+                "analysis":"completed",
+                "status":"reasoned"
+            }
+
+text = problem.get("input", "")
+
+        knowledge = problem.get(
+            "knowledge",
+            {}
+        )
+
+        has_knowledge = problem.get(
+            "has_knowledge",
+            False
+        )
+
+        steps = [
+            "understand_problem"
+        ]
+
+        if has_knowledge:
+            steps.append(
+                "use_existing_knowledge"
+            )
+
+            conclusion = knowledge.get(
+                "answer"
+            )
+
+        else:
+            steps.append(
+                "reason_without_knowledge"
+            )
+
+            conclusion = self.generate_reasoned_answer(
+                text
+            )
+
+
+        return {
+            "problem": problem,
+            "knowledge_used": has_knowledge,
+            "reasoning_steps": steps,
+            "conclusion": conclusion,
+            "analysis": "completed",
+            "status": "reasoned"
+        }
+
+
+    def generate_reasoned_answer(self, text):
+
+        t = text.lower()
+
+
+        if any(x in t for x in [
+            "تفاوت",
+            "فرق",
+            "چیه",
+            "چیست"
+        ]):
+
+            clean = text.replace(
+                "؟",
+                ""
+            )
+
+            for prefix in [
+                "تفاوت",
+                "فرق",
+                "مقایسه"
+            ]:
+                clean = clean.replace(
+                    prefix,
+                    ""
+                )
+
+            parts = clean.split("با")
+
+            if len(parts) >= 2:
+
+                a = parts[0].strip()
+                b = parts[1].strip()
+
+                b = b.replace(
+                    "چیه",
+                    ""
+                ).replace(
+                    "چیست",
+                    ""
+                ).strip()
+
+                return (
+                    f"تحلیل سپهر:\n"
+                    f"{a} و {b} دو مفهوم متفاوت هستند.\n\n"
+                    f"مقایسه:\n"
+                    f"1- کاربرد: {a} و {b} برای اهداف متفاوت استفاده می‌شوند.\n"
+                    f"2- ساختار: هرکدام طراحی و اجزای مخصوص خود را دارند.\n"
+                    f"3- مزایا: هرکدام در شرایط خاص بهتر عمل می‌کنند.\n"
+                    f"4- محدودیت: هرکدام نقاط ضعف مخصوص خود را دارند.\n\n"
+                    f"نتیجه: انتخاب بین آنها به نیاز و شرایط استفاده بستگی دارد."
+                )
+
+
+        if any(x in t for x in [
+            "چرا",
+            "علت",
+            "دلیل"
+        ]):
+
+            return (
+                "تحلیل سپهر:\n"
+                "برای پاسخ، مسئله به علت‌ها و عوامل موثر تقسیم شد.\n"
+                "سپس ارتباط بین عوامل بررسی می‌شود."
+            )
+
+
+        if any(x in t for x in [
+            "چطور",
+            "چگونه"
+        ]):
+
+            return (
+                "تحلیل سپهر:\n"
+                "موضوع به مراحل قابل اجرا تقسیم می‌شود:\n"
+                "1- بررسی شرایط اولیه\n"
+                "2- انتخاب روش مناسب\n"
+                "3- اجرای مراحل\n"
+                "4- بررسی نتیجه"
+            )
+
+
+        return (
+            "تحلیل سپهر:\n"
+            "اطلاعات مستقیم پیدا نشد، "
+            "اما مسئله با روش استدلالی بررسی شد."
+        )
+
+
+self_reasoning = SelfReasoning()

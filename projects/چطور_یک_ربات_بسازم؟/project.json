@@ -1,0 +1,75 @@
+{
+    "project": "چطور_یک_ربات_بسازم؟",
+    "pipeline": [
+        {
+            "request": "چطور یک ربات بسازم؟",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "چطور یک ربات بسازم؟",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/چطور_یک_ربات_بسازم؟/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/چطور_یک_ربات_بسازم؟/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/چطور_یک_ربات_بسازم؟/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "چطور_یک_ربات_بسازم؟",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "چطور_یک_ربات_بسازم؟",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

@@ -1,3 +1,4 @@
+from core.services.self_completion_service import self_completion_service
 from core.dispatcher.dispatcher import dispatcher
 from core.decision.decision_core import decision_core
 from core.projects.engine.project_manager import project_manager
@@ -17,7 +18,9 @@ from core.memory.experience_memory import ExperienceMemory
 from core.memory.memory_intelligence import MemoryIntelligence
 from core.memory.memory_manager import memory_manager
 from core.memory.experience_analyzer import experience_analyzer
+from core.conversation.conversation_intelligence import conversation
 from core.memory.feedback_analyzer import feedback_analyzer
+from core.self_improvement.self_improvement_pipeline import self_improvement_pipeline
 from core.learning.capability_creator import CapabilityCreator
 from core.learning.capability_tester import CapabilityTester
 from core.learning.capability_quality import CapabilityQuality
@@ -87,11 +90,23 @@ class RuntimeRouterBridge:
         self._performance_recorded = set()
 
         try:
-            experience_context = self.experience_memory.recall()
+            memory_result = self.experience_memory.recall()
+
+            experience_context = memory_result.get(
+                "experiences",
+                []
+            )
+
+            from core.memory.experience_normalizer import experience_normalizer
+
+            normalized_experiences = [
+                experience_normalizer.normalize(x)
+                for x in experience_context
+            ]
 
             experience_analysis = experience_analyzer.analyze(
                 text,
-                experience_context
+                normalized_experiences
             )
 
             print(
@@ -109,13 +124,123 @@ class RuntimeRouterBridge:
                 memory_payload
             )
 
+            # MEMORY AFTER DECISION FIX
+            # memory provides context only, never controls route
+
+
             print("Memory Intelligence:", memory_analysis)
+
+            
 
             decision = decision_core.decide(
                 text,
                 memory_context=memory_analysis
             )
             print("Decision:", decision)
+            print("Decision TYPE:", type(decision))
+
+
+            # ==============================
+            # SELF IMPROVEMENT OBSERVER
+            # ==============================
+
+            try:
+
+                improvement = self_improvement_pipeline.run(
+                    text,
+                    {
+                        "confidence": experience_analysis.get(
+                            "confidence",
+                            0
+                        ),
+                        "successful_count": experience_analysis.get(
+                            "successful_count",
+                            0
+                        )
+                    },
+                    memory_analysis,
+                    decision
+                )
+
+                print(
+                    "Self Improvement:",
+                    improvement
+                )
+
+            except Exception as e:
+                print(
+                    "Self Improvement Error:",
+                    e
+                )
+
+
+
+
+            # =====================================
+            # COGNITIVE REASONING ROUTE
+            # =====================================
+
+            if decision.get("decision") == "cognitive_reasoning" or decision.get("route") == "knowledge":
+
+                print("Cognitive Reasoning Activated")
+
+                try:
+                    from core.cognitive.reasoning_bridge import reasoning_bridge
+
+                    cognitive_result = reasoning_bridge.think(text)
+
+                    return {
+                        "route": "knowledge",
+                        "decision": "cognitive_reasoning",
+                        "status": "completed",
+                        "result": cognitive_result
+                    }
+
+                except Exception as e:
+                    print("Cognitive bridge error:", e)
+
+                    return {
+                        "route": "knowledge",
+                        "decision": "cognitive_reasoning",
+                        "status": "failed",
+                        "error": str(e)
+                    }
+
+            # =====================================
+            # COGNITIVE REASONING EXECUTION
+            # =====================================
+
+            if decision.get("route") == "knowledge":
+
+                print("Cognitive Reasoning Route Activated")
+
+                from core.cognitive.reasoning_bridge import reasoning_bridge
+
+                reasoning_result = reasoning_bridge.think(text)
+
+                return {
+                    "route": "knowledge",
+                    "decision": "reasoning_completed",
+                    "result": reasoning_result,
+                    "response": reasoning_result.get("solution")
+                }
+
+
+            # =====================================
+            # SELF COMPLETION EXECUTION
+            # =====================================
+
+            if decision.get("route") == "self_completion":
+
+                print("Self Completion Execution")
+
+                result = self_completion_service.analyze()
+
+                return {
+                    "route":"self_completion",
+                    "status":"executed",
+                    "result":result
+                }
 
 
             # =====================================
@@ -393,6 +518,8 @@ class RuntimeRouterBridge:
 
 
         except Exception as e:
+            import traceback
+            traceback.print_exc()
             print("Decision bypass:", e)
 
 
@@ -558,11 +685,40 @@ class RuntimeRouterBridge:
             }
 
 
-        return {
-            "route":"conversation",
-            "action":"generate_response",
-            "status":"sent_to_chat"
-        }
+        try:
+            from core.conversation.conversation_runtime import conversation_runtime
+
+            conversation_result = conversation_runtime.process(text)
+
+            return {
+                "route": "conversation",
+                "action": "generate_response",
+                "status": "completed",
+                "response": conversation_result
+            }
+
+        except Exception as e:
+            return {
+                "route": "conversation",
+                "action": "generate_response",
+                "status": "failed",
+                "error": str(e)
+            }
+            return {
+                'route': 'conversation',
+                'action': 'generate_response',
+                'status': 'completed',
+                'conversation': live_result,
+                'response': conversation_answer
+            }
+
+        except Exception as e:
+            return {
+                'route': 'conversation',
+                'action': 'generate_response',
+                'status': 'failed',
+                'error': str(e)
+            }
 
 
 

@@ -1,0 +1,75 @@
+{
+    "project": "یک_برنامه_برای_من_طراحی_کن",
+    "pipeline": [
+        {
+            "request": "یک برنامه برای من طراحی کن",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "یک برنامه برای من طراحی کن",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/یک_برنامه_برای_من_طراحی_کن/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_برنامه_برای_من_طراحی_کن/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/یک_برنامه_برای_من_طراحی_کن/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "یک_برنامه_برای_من_طراحی_کن",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "یک_برنامه_برای_من_طراحی_کن",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

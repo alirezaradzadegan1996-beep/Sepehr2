@@ -6,7 +6,8 @@ class LearningInsightEngine:
 
     def generate(self):
 
-        experiences = experience_memory.recall()
+        memory = experience_memory.recall()
+        experiences = memory.get("experiences", [])
 
         insights = []
 

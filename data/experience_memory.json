@@ -1,0 +1,1090 @@
+[
+  {
+    "goal": "Unified memory core test",
+    "input": "Unified memory core test",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "Sepehr cognitive memory integration",
+    "input": "Sepehr cognitive memory integration",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "چخبر",
+    "input": "چخبر",
+    "skill": "conversation",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "test string experience",
+    "input": "test string experience",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "چخبر",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": "سلام علیرضا، من فعال هستم."
+  },
+  {
+    "goal": "سلام دوباره",
+    "input": "سلام دوباره",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": "سلام علیرضا"
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "سلام",
+    "input": "سلام",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "Sepehr ready"
+  },
+  {
+    "goal": "اسم من چی بود؟",
+    "input": "اسم من چی بود؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "اسم شما علیرضا است."
+  },
+  {
+    "goal": "چرا ماشین من داغ می‌کند؟",
+    "input": "چرا ماشین من داغ می‌کند؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": null
+  },
+  {
+    "goal": "به نظرت برای کاهش وزن چه کار کنم؟",
+    "input": "به نظرت برای کاهش وزن چه کار کنم؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": null
+  },
+  {
+    "goal": "چرا ماشین من داغ می‌کند؟",
+    "input": "چرا ماشین من داغ می‌کند؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": null
+  },
+  {
+    "goal": "اسم من چی بود؟",
+    "input": "اسم من چی بود؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "اسم شما علیرضا است."
+  },
+  {
+    "goal": "چرا ماشین من داغ می‌کند؟",
+    "input": "چرا ماشین من داغ می‌کند؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "دلایل احتمالی می‌تواند شامل کمبود مایع خنک‌کننده، خرابی فن، مشکل ترموستات، گرفتگی رادیاتور یا ایراد در سیستم خنک‌کننده باشد. برای بررسی دقیق‌تر باید دمای موتور، وضعیت فن و سطح آب رادیاتور بررسی شود."
+  },
+  {
+    "goal": "اسم من چی بود؟",
+    "input": "اسم من چی بود؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "اسم شما علیرضا است."
+  },
+  {
+    "goal": "چرا ماشین من داغ می‌کند؟",
+    "input": "چرا ماشین من داغ می‌کند؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل انجام شد. برای پاسخ دقیق‌تر نیاز به اطلاعات بیشتری دارم."
+  },
+  {
+    "goal": "AI چیست؟",
+    "input": "AI چیست؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل انجام شد. برای پاسخ دقیق‌تر نیاز به اطلاعات بیشتری دارم."
+  },
+  {
+    "goal": "اسم من چی بود؟",
+    "input": "اسم من چی بود؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "اسم شما علیرضا است."
+  },
+  {
+    "goal": "تفاوت هوش مصنوعی و یادگیری ماشین چیست؟",
+    "input": "تفاوت هوش مصنوعی و یادگیری ماشین چیست؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل سپهر:\nمشکل مربوط به افزایش دمای موتور است.\nعلت‌های احتمالی:\n1- کمبود مایع خنک کننده\n2- خرابی فن خنک کننده\n3- گیر کردن ترموستات\n4- گرفتگی رادیاتور\n5- مشکل واتر پمپ\nپیشنهاد: ابتدا سطح آب رادیاتور، عملکرد فن و نشتی بررسی شود."
+  },
+  {
+    "goal": "cat > core/cognitive/self_reasoning.py <<'PY'",
+    "input": "cat > core/cognitive/self_reasoning.py <<'PY'",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "class SelfReasoning:",
+    "input": "class SelfReasoning:",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "    def analyze(self, problem):",
+    "input": "    def analyze(self, problem):",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        text = problem.get(\"input\", \"\")",
+    "input": "        text = problem.get(\"input\", \"\")",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        knowledge = problem.get(",
+    "input": "        knowledge = problem.get(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"knowledge\",",
+    "input": "            \"knowledge\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            {}",
+    "input": "            {}",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        )",
+    "input": "        )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        has_knowledge = problem.get(",
+    "input": "        has_knowledge = problem.get(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"has_knowledge\",",
+    "input": "            \"has_knowledge\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            False",
+    "input": "            False",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        )",
+    "input": "        )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        steps = [",
+    "input": "        steps = [",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"understand_problem\"",
+    "input": "            \"understand_problem\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        ]",
+    "input": "        ]",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        if has_knowledge:",
+    "input": "        if has_knowledge:",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            steps.append(",
+    "input": "            steps.append(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"use_existing_knowledge\"",
+    "input": "                \"use_existing_knowledge\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            conclusion = knowledge.get(",
+    "input": "            conclusion = knowledge.get(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"answer\"",
+    "input": "                \"answer\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        else:",
+    "input": "        else:",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            steps.append(",
+    "input": "            steps.append(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"reason_without_knowledge\"",
+    "input": "                \"reason_without_knowledge\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            conclusion = self.generate_reasoned_answer(",
+    "input": "            conclusion = self.generate_reasoned_answer(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                text",
+    "input": "                text",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        return {",
+    "input": "        return {",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"problem\": problem,",
+    "input": "            \"problem\": problem,",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"knowledge_used\": has_knowledge,",
+    "input": "            \"knowledge_used\": has_knowledge,",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"reasoning_steps\": steps,",
+    "input": "            \"reasoning_steps\": steps,",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"conclusion\": conclusion,",
+    "input": "            \"conclusion\": conclusion,",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"analysis\": \"completed\",",
+    "input": "            \"analysis\": \"completed\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"status\": \"reasoned\"",
+    "input": "            \"status\": \"reasoned\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        }",
+    "input": "        }",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "    def generate_reasoned_answer(self, text):",
+    "input": "    def generate_reasoned_answer(self, text):",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        t = text.lower()",
+    "input": "        t = text.lower()",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        if any(x in t for x in [",
+    "input": "        if any(x in t for x in [",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"تفاوت\",",
+    "input": "            \"تفاوت\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"فرق\",",
+    "input": "            \"فرق\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        ]):",
+    "input": "        ]):",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            parts = text.replace(",
+    "input": "            parts = text.replace(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"؟\",",
+    "input": "                \"؟\",",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"\"",
+    "input": "                \"\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            ).split(",
+    "input": "            ).split(",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"با\"",
+    "input": "                \"با\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            if len(parts) >= 2:",
+    "input": "            if len(parts) >= 2:",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                a = parts[0].strip()",
+    "input": "                a = parts[0].strip()",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                b = parts[1].strip()",
+    "input": "                b = parts[1].strip()",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                return (",
+    "input": "                return (",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"تحلیل سپهر:\\n\"",
+    "input": "                    f\"تحلیل سپهر:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"{a} و {b} دو مفهوم متفاوت هستند.\\n\\n\"",
+    "input": "                    f\"{a} و {b} دو مفهوم متفاوت هستند.\\n\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"مقایسه:\\n\"",
+    "input": "                    f\"مقایسه:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"1- کاربرد: {a} و {b} برای اهداف متفاوت استفاده می‌شوند.\\n\"",
+    "input": "                    f\"1- کاربرد: {a} و {b} برای اهداف متفاوت استفاده می‌شوند.\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"3- مزایا: هرکدام در شرایط خاص بهتر عمل می‌کنند.\\n\"",
+    "input": "                    f\"3- مزایا: هرکدام در شرایط خاص بهتر عمل می‌کنند.\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"4- محدودیت: هرکدام نقاط ضعف مخصوص خود را دارند.\\n\\n\"",
+    "input": "                    f\"4- محدودیت: هرکدام نقاط ضعف مخصوص خود را دارند.\\n\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                    f\"نتیجه: انتخاب بین آنها به نیاز و شرایط استفاده بستگی دارد.\"",
+    "input": "                    f\"نتیجه: انتخاب بین آنها به نیاز و شرایط استفاده بستگی دارد.\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                )",
+    "input": "                )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        if any(x in t for x in [",
+    "input": "        if any(x in t for x in [",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        ]):",
+    "input": "        ]):",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            return (",
+    "input": "            return (",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"تحلیل سپهر:\\n\"",
+    "input": "                \"تحلیل سپهر:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"سپس ارتباط بین عوامل بررسی می‌شود.\"",
+    "input": "                \"سپس ارتباط بین عوامل بررسی می‌شود.\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        if any(x in t for x in [",
+    "input": "        if any(x in t for x in [",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        ]):",
+    "input": "        ]):",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            return (",
+    "input": "            return (",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"تحلیل سپهر:\\n\"",
+    "input": "                \"تحلیل سپهر:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"موضوع به مراحل قابل اجرا تقسیم می‌شود:\\n\"",
+    "input": "                \"موضوع به مراحل قابل اجرا تقسیم می‌شود:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"1- بررسی شرایط اولیه\\n\"",
+    "input": "                \"1- بررسی شرایط اولیه\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"2- انتخاب روش مناسب\\n\"",
+    "input": "                \"2- انتخاب روش مناسب\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"3- اجرای مراحل\\n\"",
+    "input": "                \"3- اجرای مراحل\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "                \"4- بررسی نتیجه\"",
+    "input": "                \"4- بررسی نتیجه\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            )",
+    "input": "            )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        return (",
+    "input": "        return (",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"تحلیل سپهر:\\n\"",
+    "input": "            \"تحلیل سپهر:\\n\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"اطلاعات مستقیم پیدا نشد، \"",
+    "input": "            \"اطلاعات مستقیم پیدا نشد، \"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "            \"اما مسئله با روش استدلالی بررسی شد.\"",
+    "input": "            \"اما مسئله با روش استدلالی بررسی شد.\"",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "        )",
+    "input": "        )",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "self_reasoning = SelfReasoning()",
+    "input": "self_reasoning = SelfReasoning()",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل اولیه سپهر:\nدانش مستقیم پیدا نشد، اما مسئله بررسی و به چند بخش قابل تحلیل تقسیم شد."
+  },
+  {
+    "goal": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+    "input": "تفاوت دستمال کاغذی با پول رو توصیف کن؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل مقایسه‌ای سپهر:\n\nموضوع اول: دستمال کاغذی\nموضوع دوم: پول رو توصیف کن؟\n\n1- کاربرد:\nدستمال کاغذی و پول رو توصیف کن؟ هدف و کاربرد متفاوتی دارند.\n\n2- ساختار:\nدستمال کاغذی و پول رو توصیف کن؟ از نظر ساختار و اجزا متفاوت هستند.\n\n3- نحوه استفاده:\nهرکدام در شرایط خاص خود مزیت دارند.\n\n4- محدودیت:\nهرکدام نقاط ضعف مخصوص خود را دارند.\n\nنتیجه:\nانتخاب بین دستمال کاغذی و پول رو توصیف کن؟ به نیاز و شرایط استفاده بستگی دارد."
+  },
+  {
+    "goal": "سلام سپهر",
+    "input": "سلام سپهر",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "تحلیل سپهر:\nسلام سپهر یک موضوع قابل بررسی است.\n\nمقایسه:\n1- کاربرد\n2- ساختار\n3- مزایا\n4- محدودیت‌ها\n\nنتیجه: تفاوت‌ها بر اساس هدف و شرایط استفاده مشخص می‌شوند."
+  }
+]

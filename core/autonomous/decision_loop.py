@@ -1,13 +1,6 @@
-class AutonomousDecisionLoop:
 
+class DecisionLoop:
+    def decide(self, context):
+        return {"decision":"continue","context":context}
 
-    def run(self, observation):
-
-        return {
-            "observation":observation,
-            "decision":"continue",
-            "status":"decided"
-        }
-
-
-decision_loop = AutonomousDecisionLoop()
+decision_loop = DecisionLoop()

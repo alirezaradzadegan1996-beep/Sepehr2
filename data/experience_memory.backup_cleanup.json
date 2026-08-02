@@ -1,0 +1,146 @@
+[
+  {
+    "goal": "Unified memory core test",
+    "input": "Unified memory core test",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "Sepehr cognitive memory integration",
+    "input": "Sepehr cognitive memory integration",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "چخبر",
+    "input": "چخبر",
+    "skill": "conversation",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "test string experience",
+    "input": "test string experience",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "چخبر",
+    "input": "unknown",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": "سلام علیرضا، من فعال هستم."
+  },
+  {
+    "goal": "سلام دوباره",
+    "input": "سلام دوباره",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": "سلام علیرضا"
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "Sepehr ready"
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "Sepehr ready"
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "خوشبختم علیرضا، به خاطر سپردم."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "هنوز اسم شما را نمی‌دانم."
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "هنوز اسم شما را نمی‌دانم."
+  },
+  {
+    "goal": "اسم من علیرضا است",
+    "input": "اسم من علیرضا است",
+    "skill": "conversation",
+    "success": true,
+    "source": "experience_memory",
+    "response": null
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "خوشبختم علیرضا، به خاطر سپردم."
+  },
+  {
+    "goal": "unknown",
+    "input": "unknown",
+    "skill": "unknown",
+    "success": false,
+    "source": "experience_memory",
+    "response": "اسم شما علیرضا است."
+  },
+  {
+    "goal": "سلام",
+    "input": "سلام",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "Sepehr ready"
+  },
+  {
+    "goal": "اسم من چی بود؟",
+    "input": "اسم من چی بود؟",
+    "skill": "conversation",
+    "success": true,
+    "source": "conversation_runtime",
+    "response": "اسم شما علیرضا است."
+  }
+]

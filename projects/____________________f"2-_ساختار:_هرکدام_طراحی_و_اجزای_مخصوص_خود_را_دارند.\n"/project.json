@@ -1,0 +1,75 @@
+{
+    "project": "____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"",
+    "pipeline": [
+        {
+            "request": "                    f\"2- ساختار: هرکدام طراحی و اجزای مخصوص خود را دارند.\\n\"",
+            "project_type": "general",
+            "features": [
+                "database",
+                "users",
+                "interface"
+            ],
+            "status": "understood"
+        },
+        {
+            "request": "                    f\"2- ساختار: هرکدام طراحی و اجزای مخصوص خود را دارند.\\n\"",
+            "type": "application",
+            "status": "analyzed"
+        },
+        {
+            "language": "python",
+            "database": "sqlite",
+            "interface": "ui",
+            "status": "selected"
+        },
+        {
+            "files": [
+                "main.py",
+                "database.py",
+                "config.py",
+                "requirements.txt",
+                "test.py",
+                "README.md"
+            ],
+            "status": "created"
+        },
+        {
+            "files": [
+                {
+                    "status": "created",
+                    "file": "projects/____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"/type"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"/features"
+                },
+                {
+                    "status": "created",
+                    "file": "projects/____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"/template"
+                }
+            ],
+            "status": "code_generated"
+        },
+        {
+            "dependencies": [
+                "planned"
+            ],
+            "status": "ready"
+        },
+        {
+            "status": "passed",
+            "output": ""
+        },
+        {
+            "project": "____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"",
+            "errors": 0,
+            "status": "clean"
+        },
+        {
+            "project": "____________________f\"2-_ساختار:_هرکدام_طراحی_و_اجزای_مخصوص_خود_را_دارند.\\n\"",
+            "delivery": "completed",
+            "status": "ready"
+        }
+    ],
+    "status": "completed"
+}

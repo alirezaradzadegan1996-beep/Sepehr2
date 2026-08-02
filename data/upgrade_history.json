@@ -1,0 +1,19 @@
+[
+    {
+        "analysis": {
+            "system": "Sepehr2",
+            "needs_upgrade": true,
+            "status": "analyzed"
+        },
+        "upgrade": {
+            "analysis": {
+                "system": "Sepehr2",
+                "needs_upgrade": true,
+                "status": "analyzed"
+            },
+            "upgrade": "generated",
+            "status": "planned"
+        },
+        "status": "SELF_DEVELOPMENT_ACTIVE"
+    }
+]

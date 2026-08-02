@@ -1,0 +1,67 @@
+class SelfReasoning:
+
+
+    def analyze(self, problem):
+
+        knowledge = problem.get(
+            "knowledge",
+            {}
+        )
+
+        has_knowledge = problem.get(
+            "has_knowledge",
+            False
+        )
+
+
+        steps = [
+            "understand_problem"
+        ]
+
+
+        if has_knowledge:
+
+            steps.append(
+                "use_existing_knowledge"
+            )
+
+            conclusion = knowledge.get(
+                "answer"
+            )
+
+        else:
+
+            steps.append(
+                "reason_without_knowledge"
+            )
+
+            conclusion = (
+                "اطلاعات کافی در دانش موجود نیست، "
+                "نیاز به تحلیل بیشتر وجود دارد."
+            )
+
+
+        return {
+
+            "problem": problem,
+
+            "knowledge_used":
+                has_knowledge,
+
+            "reasoning_steps":
+                steps,
+
+            "conclusion":
+                conclusion,
+
+            "analysis":
+                "completed",
+
+            "status":
+                "reasoned"
+
+        }
+
+
+
+self_reasoning = SelfReasoning()

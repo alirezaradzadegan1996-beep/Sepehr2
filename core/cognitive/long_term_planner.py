@@ -1,16 +1,16 @@
-class LongTermPlanner:
 
+class LongTermPlanner:
 
     def plan(self, goal):
 
         return {
-            "goal":goal,
-            "timeline":[
-                "short_term",
-                "medium_term",
-                "long_term"
+            "goal": goal,
+            "steps": [
+                "analyze",
+                "learn",
+                "execute"
             ],
-            "status":"planned"
+            "status": "planned"
         }
 
 

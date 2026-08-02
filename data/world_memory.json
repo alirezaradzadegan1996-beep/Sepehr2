@@ -1,0 +1,12 @@
+[
+  {
+    "situation": {
+      "environment": {
+        "source": "camera",
+        "status": "received"
+      },
+      "status": "updated"
+    },
+    "status": "understood"
+  }
+]

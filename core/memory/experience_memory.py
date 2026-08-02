@@ -1,89 +1,92 @@
 import json
-import os
-from datetime import datetime
+from pathlib import Path
 
-
-FILE = "data/experiences.json"
+from core.memory.experience_normalizer import experience_normalizer
 
 
 class ExperienceMemory:
 
-
     def __init__(self):
+
+        self.file = Path("data/experience_memory.json")
+        self.experiences = []
 
         self.load()
 
 
-
     def load(self):
 
-        if os.path.exists(FILE):
+        if self.file.exists():
 
-            with open(
-                FILE,
-                encoding="utf-8"
-            ) as f:
+            try:
+                raw = json.loads(
+                    self.file.read_text(encoding="utf-8")
+                )
 
-                self.data = json.load(f)
+                self.experiences = [
+                    experience_normalizer.normalize(item)
+                    for item in raw
+                    if item is not None
+                ]
 
-        else:
+                self.file.write_text(
+                    json.dumps(
+                        self.experiences,
+                        ensure_ascii=False,
+                        indent=2
+                    ),
+                    encoding="utf-8"
+                )
 
-            self.data = []
+            except Exception:
+                self.experiences = []
 
 
+    def save(self, experience):
 
-    def save(self):
+        experience = experience_normalizer.normalize(experience)
 
-        with open(
-            FILE,
-            "w",
-            encoding="utf-8"
-        ) as f:
+        self.experiences.append(experience)
 
-            json.dump(
-                self.data,
-                f,
+        self.file.write_text(
+            json.dumps(
+                self.experiences,
                 ensure_ascii=False,
                 indent=2
-            )
+            ),
+            encoding="utf-8"
+        )
 
-
-
-    def remember(
-        self,
-        goal,
-        skill,
-        result,
-        lesson
-    ):
-
-        item = {
-
-            "time":str(datetime.now()),
-
-            "goal":goal,
-
-            "skill":skill,
-
-            "result":result,
-
-            "lesson":lesson
-
+        return {
+            "experience": experience,
+            "status": "stored",
+            "count": len(self.experiences)
         }
-
-
-        self.data.append(item)
-
-        self.save()
-
-
-        return item
-
 
 
     def recall(self):
 
-        return self.data
+        return {
+            "experiences": self.experiences,
+            "count": len(self.experiences),
+            "status": "recalled"
+        }
+
+
+    def search(self, keyword):
+
+        results = []
+
+        for item in self.experiences:
+
+            if keyword in str(item):
+                results.append(item)
+
+
+        return {
+            "results": results,
+            "status": "search_completed"
+        }
 
 
 
